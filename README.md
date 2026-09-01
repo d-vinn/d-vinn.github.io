@@ -7,8 +7,8 @@
 
 ## 📬 Contact & Links
 - **Email**: [bins021102@naver.com](mailto:bins021102@naver.com)
-- **GitHub**: [github.com/your-username](https://github.com/) *(링크 수정 필요)*
-- **Blog/Portfolio**: [your-username.github.io](https://your-username.github.io)
+- **GitHub**: [github.com/d-vinn](https://github.com/d-vinn) 
+- **Blog/Portfolio**: [d-vinn.github.io](https://d-vinn.github.io)
 
 ---
 
