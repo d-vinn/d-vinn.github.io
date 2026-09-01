@@ -4,620 +4,394 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KIM DABIN | Portfolio & Semiconductor Quality Engineering</title>
-  
+
   <script src="https://cdn.tailwindcss.com"></script>
-  
   <script src="https://unpkg.com/lucide@latest"></script>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
-  
+
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
 
-  <style>
-    body {
-      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-      animation: fadeIn 0.25s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    /* Project Custom Styling Preservation */
-    .prose-table table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0;
-    }
-    .prose-table th, .prose-table td {
-      padding: 12px 14px;
-      border: 1px solid #E2E8F0;
-      text-align: left;
-    }
-    .prose-table th {
-      background-color: #F8FAFC;
-      font-weight: 600;
-    }
-    details {
-      background: #1E293B;
-      color: #F8FAFC;
-      border-radius: 8px;
-      margin: 15px 0;
-      overflow: hidden;
-    }
-    summary {
-      padding: 14px 20px;
-      font-weight: 600;
-      cursor: pointer;
-      background: #0F172A;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  </style>
+  <!-- 분리된 스타일 -->
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-700 min-h-screen flex flex-col">
 
   <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-slate-200">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <button onclick="switchTab('home')" class="font-extrabold text-lg text-indigo-600 tracking-tight flex items-center gap-2 hover:opacity-80 transition">
-        <i data-lucide="sparkles" class="w-5 h-5"></i> DABIN.DEV
+      <button onclick="scrollToTop()" class="font-extrabold text-lg text-indigo-600 tracking-tight flex items-center gap-2 hover:opacity-80 transition">
+        DABIN.DEV
       </button>
-      
-      <nav class="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-semibold">
-        <button id="nav-home" onclick="switchTab('home')" class="nav-btn px-3 py-1.5 rounded-lg bg-indigo-50 text-indigo-600 transition">
-          Profile
-        </button>
-        <button id="nav-project1" onclick="switchTab('project1')" class="nav-btn px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 transition">
-          Project 1 <span class="hidden sm:inline font-normal text-xs text-slate-400">(8D Report)</span>
-        </button>
-        <button id="nav-project2" onclick="switchTab('project2')" class="nav-btn px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 transition">
-          Project 2 <span class="hidden sm:inline font-normal text-xs text-slate-400">(CMP SPC)</span>
-        </button>
-        <button id="nav-project3" onclick="switchTab('project3')" class="nav-btn px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 transition">
-          Project 3 <span class="hidden sm:inline font-normal text-xs text-slate-400">(Chipping SQC)</span>
-        </button>
+
+      <nav class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-500">
+        <span class="hidden sm:inline">AI &amp; Data Analyst / Quality Engineering</span>
+        <a href="https://github.com/d-vinn" target="_blank" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 transition">
+          <i data-lucide="github" class="w-4 h-4"></i> <span class="hidden sm:inline">GitHub</span>
+        </a>
       </nav>
     </div>
   </header>
 
-  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 py-10 w-full">
+  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 py-10 w-full space-y-12">
 
-    <div id="tab-home" class="tab-content active space-y-12">
-      
-      <section class="space-y-4 pt-2">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold">
-          <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
-          AI & Data Analyst / Quality Engineering
+    <!-- ===================== Intro ===================== -->
+    <section class="space-y-4 pt-2">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold">
+        <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+        AI &amp; Data Analyst / Quality Engineering
+      </div>
+
+      <div class="space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          안녕하세요, <span class="text-indigo-600">김다빈</span>입니다.
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+          #통계학적 직관 #NLP/Vision/Embedded 모델링 역량 #반도체 품질
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 pt-2 text-sm text-slate-600">
+        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-slate-200 shadow-sm">
+          <i data-lucide="graduation-cap" class="w-4 h-4 text-indigo-600"></i>
+          <span class="font-medium text-slate-800">충남대학교 정보통계학 · 인공지능학 학사</span>
         </div>
-        
+        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-slate-200 shadow-sm">
+          <i data-lucide="mail" class="w-4 h-4 text-indigo-600"></i>
+          <a href="mailto:bins021102@naver.com" class="hover:text-indigo-600 font-medium">bins021102@naver.com</a>
+        </div>
+        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-slate-200 shadow-sm">
+          <i data-lucide="github" class="w-4 h-4 text-indigo-600"></i>
+          <a href="https://github.com/d-vinn" target="_blank" class="hover:text-indigo-600 font-medium">github.com/d-vinn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Tech Stack ===================== -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+        <i data-lucide="cpu" class="w-5 h-5 text-indigo-600"></i> Tech Stack &amp; Domain Expertise
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-600">Languages &amp; Data Analysis</h3>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">Python</span>
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">C/C++</span>
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">SQL</span>
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">R</span>
+            <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-md">PyTorch</span>
+            <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-md">Scikit-learn</span>
+            <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-md">Pandas/NumPy</span>
+          </div>
+        </div>
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-600">Engineering &amp; Quality Management</h3>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">FastAPI / Flask</span>
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">Git / Linux</span>
+            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">SQC / SPC</span>
+            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">8D Report</span>
+            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">OCAP</span>
+            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">p-Chart / I-MR</span>
+            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">ISO 9001 / 6 Sigma</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Work / Education ===================== -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <div class="space-y-4">
+        <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="briefcase" class="w-5 h-5 text-indigo-600"></i> Work Experience
+        </h2>
         <div class="space-y-2">
-          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            안녕하세요, <span class="text-indigo-600">김다빈 (KIM DABIN)</span>입니다.
-          </h1>
-          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-            통계학적 직관과 데이터 모델링 역량을 바탕으로 반도체 후공정 및 제조 품질 문제(SQC/SPC/8D)의 근본 원인을 규명하고, AI 기반 솔루션을 구축합니다.
-          </p>
-        </div>
 
-        <div class="flex flex-wrap gap-3 pt-2 text-sm text-slate-600">
-          <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-slate-200 shadow-sm">
-            <i data-lucide="graduation-cap" class="w-4 h-4 text-indigo-600"></i>
-            <span class="font-medium text-slate-800">충남대학교 정보통계학 · 인공지능학 학사</span>
-          </div>
-          <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-slate-200 shadow-sm">
-            <i data-lucide="mail" class="w-4 h-4 text-indigo-600"></i>
-            <a href="mailto:bins021102@naver.com" class="hover:text-indigo-600 font-medium">bins021102@naver.com</a>
-          </div>
-          <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-slate-200 shadow-sm">
-            <i data-lucide="github" class="w-4 h-4 text-indigo-600"></i>
-            <a href="https://github.com/d-vinn" target="_blank" class="hover:text-indigo-600 font-medium">github.com/d-vinn</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="space-y-4">
-        <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-          <i data-lucide="cpu" class="w-5 h-5 text-indigo-600"></i> Tech Stack & Domain Expertise
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-600">Languages & Data Analysis</h3>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">Python</span>
-              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">C/C++</span>
-              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">SQL</span>
-              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">R</span>
-              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-md">PyTorch</span>
-              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-md">Scikit-learn</span>
-              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-md">Pandas/NumPy</span>
-            </div>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-600">Quality Management & Engineering</h3>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">SQC / SPC</span>
-              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">8D Report</span>
-              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">OCAP</span>
-              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">p-Chart / I-MR</span>
-              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">ISO 9001 / 6 Sigma</span>
-              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">FastAPI / Flask</span>
-              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">Git / Linux</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <div class="space-y-4">
-          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-            <i data-lucide="briefcase" class="w-5 h-5 text-indigo-600"></i> Work Experience
-          </h2>
-          <div class="border-l-2 border-indigo-200 pl-4 space-y-6">
-            <div class="space-y-1">
-              <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">2024.11 - 2025.01</span>
-              <h3 class="text-base font-bold text-slate-900">Middle Georgia State University</h3>
-              <p class="text-sm sm:text-base text-slate-600 font-normal">웹 개발 및 AI 모델링 인턴</p>
-            </div>
-            <div class="space-y-1">
-              <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">2024.06 - 2024.08</span>
-              <h3 class="text-base font-bold text-slate-900">(주)퀀토믹</h3>
-              <p class="text-sm sm:text-base text-slate-600 font-normal">데이터 분석 및 AI 모델링 인턴</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="space-y-4">
-          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-            <i data-lucide="book-open" class="w-5 h-5 text-indigo-600"></i> Education & Training
-          </h2>
-          <div class="border-l-2 border-indigo-200 pl-4 space-y-5">
-            <div class="space-y-1">
-              <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">2021.03 - 2026.02</span>
-              <h3 class="text-base font-bold text-slate-900">충남대학교 (학사 졸업)</h3>
-              <p class="text-sm sm:text-base text-slate-600">정보통계학 전공 / 인공지능학 복수전공 <span class="font-semibold text-slate-800">(3.86 / 4.5)</span></p>
-            </div>
-            
-            <div class="space-y-2 pt-2">
-              <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">부트캠프 & 실무 교육 수료</span>
-              
-              <div class="bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-sm">
-                <div>
-                  <div class="text-sm sm:text-base font-bold text-indigo-950 flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-indigo-600"></span> 반도체 실무 부트캠프 수료
-                  </div>
-                  <p class="text-xs sm:text-sm text-slate-600 mt-0.5">8D Report 실무 / CMP SPC 분석 / Chipping SQC 모델링</p>
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <button onclick="switchTab('project1')" class="px-2.5 py-1 bg-white hover:bg-indigo-600 hover:text-white text-indigo-700 text-xs font-bold rounded-lg border border-indigo-200 transition flex items-center gap-1 shadow-sm">
-                    P1 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                  </button>
-                  <button onclick="switchTab('project2')" class="px-2.5 py-1 bg-white hover:bg-indigo-600 hover:text-white text-indigo-700 text-xs font-bold rounded-lg border border-indigo-200 transition flex items-center gap-1 shadow-sm">
-                    P2 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                  </button>
-                  <button onclick="switchTab('project3')" class="px-2.5 py-1 bg-white hover:bg-indigo-600 hover:text-white text-indigo-700 text-xs font-bold rounded-lg border border-indigo-200 transition flex items-center gap-1 shadow-sm">
-                    P3 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                  </button>
-                </div>
+          <!-- Middle Georgia State University: 클릭 시 팝업 -->
+          <button onclick="openBootcamp('georgia')" class="w-full text-left bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
+            <div>
+              <div class="text-sm sm:text-base font-bold text-slate-900 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 bg-slate-400 rounded-full"></span> Middle Georgia State University
               </div>
+              <p class="text-xs sm:text-sm text-slate-500 mt-1">웹 개발 및 AI 모델링 인턴 · 2024.11 – 2025.01</p>
+            </div>
+            <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-slate-500 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition">
+              자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </span>
+          </button>
 
-              <div class="text-sm sm:text-base text-slate-700 space-y-1 pl-2">
-                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-400 rounded-full"></span> 로보테크 AI 부트캠프 수료</p>
-                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-400 rounded-full"></span> 방산 실무 교육 수료</p>
+          <!-- (주)퀀토믹: 클릭 시 팝업 -->
+          <button onclick="openBootcamp('quantomic')" class="w-full text-left bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
+            <div>
+              <div class="text-sm sm:text-base font-bold text-slate-900 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 bg-slate-400 rounded-full"></span> (주)퀀토믹
               </div>
+              <p class="text-xs sm:text-sm text-slate-500 mt-1">데이터 분석 및 AI 모델링 인턴 · 2024.06 – 2024.08</p>
             </div>
-          </div>
+            <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-slate-500 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition">
+              자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </span>
+          </button>
         </div>
+      </div>
 
-      </section>
-
-      <section class="space-y-4">
+      <div class="space-y-4">
         <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-          <i data-lucide="award" class="w-5 h-5 text-indigo-600"></i> Honors, Certifications & Languages
+          <i data-lucide="book-open" class="w-5 h-5 text-indigo-600"></i> Education &amp; Training
         </h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2 border-b pb-3 border-slate-100">
-              <i data-lucide="trophy" class="w-5 h-5 text-amber-500"></i> 주요 수상 내역
-            </h3>
-            <ul class="space-y-3.5">
-              <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm sm:text-base text-slate-700">
-                <div>
-                  <span class="font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded mr-1">최우수상</span>
-                  <span class="font-semibold text-slate-900">DSC 오픈 데이터 창업 챌린지</span>
-                </div>
-                <span class="text-xs sm:text-sm text-slate-400 mt-1 sm:mt-0 font-medium">2025.11 · DSC 공유대학</span>
-              </li>
-              <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm sm:text-base text-slate-700">
-                <div>
-                  <span class="font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded mr-1">우수포스터상</span>
-                  <span class="font-semibold text-slate-900">Data Science Challenge 2025</span>
-                </div>
-                <span class="text-xs sm:text-sm text-slate-400 mt-1 sm:mt-0 font-medium">2025.11 · 차세대융합인재</span>
-              </li>
-              <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm sm:text-base text-slate-700">
-                <div>
-                  <span class="font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded mr-1">창의상</span>
-                  <span class="font-semibold text-slate-900">K-DATA SCIENCE 해커톤</span>
-                </div>
-                <span class="text-xs sm:text-sm text-slate-400 mt-1 sm:mt-0 font-medium">2025.09 · K-DS 컨퍼런스</span>
-              </li>
-              <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm sm:text-base text-slate-700">
-                <div>
-                  <span class="font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded mr-1">후원기업상</span>
-                  <span class="font-semibold text-slate-900">SW중심 디지털 경진대회</span>
-                </div>
-                <span class="text-xs sm:text-sm text-slate-400 mt-1 sm:mt-0 font-medium">2025.08 · ㈜그렙</span>
-              </li>
-              <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm sm:text-base text-slate-700">
-                <div>
-                  <span class="font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded mr-1">최우수상</span>
-                  <span class="font-semibold text-slate-900">빅데이터/AI 해커톤 프로그램</span>
-                </div>
-                <span class="text-xs sm:text-sm text-slate-400 mt-1 sm:mt-0 font-medium">2024.12 · RIS 사업단</span>
-              </li>
-            </ul>
+        <div class="border-l-2 border-indigo-200 pl-4 space-y-5">
+          <div class="space-y-1">
+            <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">2021.03 - 2026.02</span>
+            <h3 class="text-base font-bold text-slate-900">충남대학교 (학사 졸업)</h3>
+            <p class="text-sm sm:text-base text-slate-600">정보통계학 전공 / 인공지능학 복수전공 <span class="font-semibold text-slate-800">(3.86 / 4.5)</span></p>
           </div>
 
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-            
-            <div class="space-y-3">
-              <h3 class="text-base font-bold text-slate-900 flex items-center gap-2 border-b pb-2 border-slate-100">
-                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600"></i> 보유 자격증 (세로 나열)
-              </h3>
-              <ul class="space-y-2.5 text-sm sm:text-base">
-                <li class="flex justify-between items-center bg-slate-50 p-2.5 rounded-lg border border-slate-100">
-                  <span class="font-bold text-slate-900">AICE (BASIC)</span>
-                  <span class="text-xs sm:text-sm text-slate-500 font-medium">KT · 2024.12</span>
-                </li>
-                <li class="flex justify-between items-center bg-slate-50 p-2.5 rounded-lg border border-slate-100">
-                  <span class="font-bold text-slate-900">ADsP (데이터분석 준전문가)</span>
-                  <span class="text-xs sm:text-sm text-slate-500 font-medium">한국데이터산업진흥원 · 2024.06</span>
-                </li>
-                <li class="flex justify-between items-center bg-slate-50 p-2.5 rounded-lg border border-slate-100">
-                  <span class="font-bold text-slate-900">SQLD (SQL 개발자)</span>
-                  <span class="text-xs sm:text-sm text-slate-500 font-medium">한국데이터산업진흥원 · 2024.04</span>
-                </li>
-              </ul>
-            </div>
+          <div class="space-y-2 pt-2">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">부트캠프 &amp; 실무 교육 수료</span>
 
-            <div class="space-y-3">
-              <h3 class="text-base font-bold text-slate-900 flex items-center gap-2 border-b pb-2 border-slate-100">
-                <i data-lucide="languages" class="w-5 h-5 text-blue-600"></i> 어학 & 글로벌 역량 (세로 나열)
-              </h3>
-              <ul class="space-y-2.5 text-sm sm:text-base">
-                <li class="flex justify-between items-center bg-slate-50 p-2.5 rounded-lg border border-slate-100">
-                  <span class="font-bold text-slate-900">OPIc <span class="text-indigo-600">IH</span></span>
-                  <span class="text-xs sm:text-sm text-slate-500 font-medium">2026.02</span>
-                </li>
-                <li class="flex justify-between items-center bg-slate-50 p-2.5 rounded-lg border border-slate-100">
-                  <span class="font-bold text-slate-900">TOEIC Speaking <span class="text-indigo-600">AM (180점)</span></span>
-                  <span class="text-xs sm:text-sm text-slate-500 font-medium">2025.11</span>
-                </li>
-                <li class="flex justify-between items-center bg-slate-50 p-2.5 rounded-lg border border-slate-100">
-                  <span class="font-bold text-slate-900">ASEAN Environment 해외 교과목 수강</span>
-                  <span class="text-xs sm:text-sm text-slate-500 font-medium">태국 (2025.01 - 2025.02)</span>
-                </li>
-              </ul>
-            </div>
+            <!-- 반도체: 클릭 시 팝업 (Project 1~3 탭) -->
+            <button onclick="openBootcamp('semiconductor')" class="w-full text-left bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-indigo-300 transition group">
+              <div>
+                <div class="text-sm sm:text-base font-bold text-indigo-950 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-indigo-600"></span> 반도체 실무 부트캠프 수료
+                </div>
+                <p class="text-xs sm:text-sm text-slate-500 font-normal mt-1">26.07.18 – 26.08.15</p>
+              </div>
+              <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-indigo-700 bg-white border border-indigo-200 rounded-lg px-2.5 py-1 group-hover:bg-indigo-600 group-hover:text-white transition">
+                자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </button>
 
+            <!-- 방산: 클릭 시 팝업 (Project 1~3 탭) -->
+            <button onclick="openBootcamp('defense')" class="w-full text-left bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-indigo-300 transition group">
+              <div>
+                <div class="text-sm sm:text-base font-bold text-indigo-950 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-indigo-600"></span> 방산 실무 교육 수료
+                </div>
+                <p class="text-xs sm:text-sm text-slate-500 font-normal mt-1">26.08.10 – 26.08.30</p>
+              </div>
+              <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-indigo-700 bg-white border border-indigo-200 rounded-lg px-2.5 py-1 group-hover:bg-indigo-600 group-hover:text-white transition">
+                자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </button>
+
+            <!-- 로보테크: 클릭 시 팝업 -->
+            <button onclick="openBootcamp('robotech')" class="w-full text-left bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-indigo-200 transition group">
+              <div>
+                <div class="text-sm sm:text-base font-bold text-slate-900 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 bg-slate-400 rounded-full"></span> 로보테크 AI 부트캠프
+                </div>
+                <p class="text-xs sm:text-sm text-slate-500 font-normal mt-1">26.07.21 – 26.01.27</p>
+              </div>
+              <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-slate-500 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition">
+                자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </button>
           </div>
-
         </div>
-      </section>
+      </div>
 
-      <section class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+    </section>
+
+    <!-- ===================== Honors / Certs / Languages ===================== -->
+    <section class="space-y-6">
+      <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+        <i data-lucide="award" class="w-5 h-5 text-indigo-600"></i> Awards, Certifications &amp; Languages
+      </h2>
+
+      <!-- 주요 수상 내역 : 카드 그리드 -->
+      <div class="space-y-3">
         <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
-          <i data-lucide="users" class="w-5 h-5 text-indigo-600"></i> 리더십 및 기타 대외 활동
+          <i data-lucide="trophy" class="w-5 h-5 text-amber-500"></i> 주요 수상 내역
         </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-slate-700">
-          <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-            <strong>충남대학교 정보통계학과</strong><br>
-            <span class="text-indigo-600 font-semibold text-xs">과동아리 회장</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex gap-3 hover:shadow-md hover:border-amber-200 transition">
+            <div class="shrink-0 w-9 h-9 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center">
+              <i data-lucide="medal" class="w-5 h-5 text-amber-500"></i>
+            </div>
+            <div class="min-w-0 space-y-1.5">
+              <span class="inline-block text-[11px] font-bold text-white bg-gradient-to-r from-amber-500 to-orange-500 px-2 py-0.5 rounded-full">최우수상</span>
+              <h4 class="text-sm font-bold text-slate-900 leading-snug">DSC 기업 연계 오픈 데이터 창업 챌린지</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">상권 빅데이터 및 정성 텍스트 융합 기반 공실 원인 진단 및 맞춤 매칭 솔루션 YOGI 개발</p>
+              <p class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3"></i> 2025.11 · DSC 공유대학
+              </p>
+            </div>
           </div>
-          <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-            <strong>충남대학교 컴퓨터융합학부</strong><br>
-            <span class="text-indigo-600 font-semibold text-xs">과동아리 임원진</span>
+
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex gap-3 hover:shadow-md hover:border-indigo-200 transition">
+            <div class="shrink-0 w-9 h-9 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center">
+              <i data-lucide="medal" class="w-5 h-5 text-indigo-500"></i>
+            </div>
+            <div class="min-w-0 space-y-1.5">
+              <span class="inline-block text-[11px] font-bold text-white bg-gradient-to-r from-indigo-500 to-blue-500 px-2 py-0.5 rounded-full">우수포스터상</span>
+              <h4 class="text-sm font-bold text-slate-900 leading-snug">Data Science Challenge 2025</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">AI-Hub 관광 Q&amp;A 데이터 활용 대전·충남의 관광정보 결손·다양성 분석, 지역 간 정보 불균형 시각화를 통한 관광정보 개선 정책 제안</p>
+              <p class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3"></i> 2025.11 · 데이터사이언스플러스차세대융합인재양성사업단
+              </p>
+            </div>
           </div>
-          <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-            <strong>충남대학교 학생홍보대사</strong><br>
-            <span class="text-indigo-600 font-semibold text-xs">SNS팀원 (2023.09~2024.08)</span>
+
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex gap-3 hover:shadow-md hover:border-emerald-200 transition">
+            <div class="shrink-0 w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center">
+              <i data-lucide="medal" class="w-5 h-5 text-emerald-500"></i>
+            </div>
+            <div class="min-w-0 space-y-1.5">
+              <span class="inline-block text-[11px] font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-500 px-2 py-0.5 rounded-full">창의상</span>
+              <h4 class="text-sm font-bold text-slate-900 leading-snug">K-DATA SCIENCE 해커톤</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">YOLOv8 활용 해양폐기물 객체 탐지 및 위험도 등급 산정 알고리즘 구축, 웹 서비스 개발</p>
+              <p class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3"></i> 2025.09 · K-DS 컨퍼런스
+              </p>
+            </div>
           </div>
+
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex gap-3 hover:shadow-md hover:border-slate-300 transition">
+            <div class="shrink-0 w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center">
+              <i data-lucide="medal" class="w-5 h-5 text-slate-500"></i>
+            </div>
+            <div class="min-w-0 space-y-1.5">
+              <span class="inline-block text-[11px] font-bold text-white bg-gradient-to-r from-slate-500 to-slate-600 px-2 py-0.5 rounded-full">후원기업상</span>
+              <h4 class="text-sm font-bold text-slate-900 leading-snug">SW중심 디지털 경진대회</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">Human Text VS AI Text 구별 NLP 모델 개발</p>
+              <p class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3"></i> 2025.08 · ㈜그렙
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex gap-3 hover:shadow-md hover:border-amber-200 transition">
+            <div class="shrink-0 w-9 h-9 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center">
+              <i data-lucide="medal" class="w-5 h-5 text-amber-500"></i>
+            </div>
+            <div class="min-w-0 space-y-1.5">
+              <span class="inline-block text-[11px] font-bold text-white bg-gradient-to-r from-amber-500 to-orange-500 px-2 py-0.5 rounded-full">최우수상</span>
+              <h4 class="text-sm font-bold text-slate-900 leading-snug">빅데이터/AI 해커톤 프로그램</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">취업준비생을 위한 취업 스펙 분석 및 추천 기업 생성 NLP 추천시스템 개발</p>
+              <p class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3"></i> 2024.12 · RIS SW/AI 사업단
+              </p>
+            </div>
+          </div>
+
         </div>
-      </section>
-
-    </div>
-
-
-    <div id="tab-project1" class="tab-content space-y-8">
-      
-      <div class="flex items-center justify-between">
-        <button onclick="switchTab('home')" class="text-xs sm:text-sm font-semibold text-indigo-600 hover:underline flex items-center gap-1">
-          <i data-lucide="arrow-left" class="w-4 h-4"></i> Profile 메인으로 돌아가기
-        </button>
-        <span class="text-xs font-bold text-slate-400">PROJECT #1</span>
       </div>
 
-      <header class="bg-gradient-to-r from-blue-900 to-slate-900 text-white p-8 sm:p-10 rounded-2xl shadow-lg">
-        <div class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3">
-          Quality Management & Problem Solving Portfolio
-        </div>
-        <h1 class="text-2xl sm:text-3xl font-extrabold mb-3">제조 품질 관리 체계 분석 및 8D Report 기반 실무 문제 해결</h1>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl">
-          글로벌 완성차/제조업의 대형 결함 사례를 바탕으로 Value Chain별 품질 보증 프로세스, OCAP vs 8D 체계 비교, 토요타 급발진 사례의 Root Cause 규명 및 8D Report 양식 실습을 집약한 프로젝트입니다.
-        </p>
-      </header>
+      <!-- 자격증 + 어학 : 2단 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-        <h2 class="text-xl font-bold text-blue-900 border-l-4 border-blue-600 pl-3">1. 프로젝트 개요 및 실무 핵심 역량</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-            <h4 class="font-bold text-slate-900 mb-2">🎯 수행 목표</h4>
-            <ul class="list-disc list-inside space-y-1 text-slate-600">
-              <li>제조 밸류체인(IQC ➔ PQC ➔ OQC ➔ CS) 전반의 품질 보증 업무 정립</li>
-              <li>현장 응급 조치(OCAP)와 구조적 원인 분석(8D Report)의 차이 및 연계성 규명</li>
-              <li>실제 글로벌 품질 결함 사례 분석을 통한 Root Cause 도출 및 8D Form 작성</li>
-              <li>ISO 9001 품질경영시스템과 6 Sigma 방법론의 상호보완적 시너지 제시</li>
-            </ul>
-          </div>
-          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-            <h4 class="font-bold text-slate-900 mb-2">🛠️ 활용 도구 및 도메인 지식</h4>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2.5 py-1 bg-slate-200 text-slate-700 text-xs font-semibold rounded">8D Report (D1~D8)</span>
-              <span class="px-2.5 py-1 bg-slate-200 text-slate-700 text-xs font-semibold rounded">OCAP</span>
-              <span class="px-2.5 py-1 bg-slate-200 text-slate-700 text-xs font-semibold rounded">IQC / PQC / OQC / CS</span>
-              <span class="px-2.5 py-1 bg-slate-200 text-slate-700 text-xs font-semibold rounded">5-Why / Fishbone</span>
-              <span class="px-2.5 py-1 bg-slate-200 text-slate-700 text-xs font-semibold rounded">ISO 9001</span>
-              <span class="px-2.5 py-1 bg-slate-200 text-slate-700 text-xs font-semibold rounded">6 Sigma (DMAIC)</span>
-              <span class="px-2.5 py-1 bg-slate-200 text-slate-700 text-xs font-semibold rounded">BOS (Brake Override System)</span>
-              <span class="px-2.5 py-1 bg-slate-200 text-slate-700 text-xs font-semibold rounded">FMEA & SOP 표준화</span>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <h3 class="text-base font-bold text-slate-900 flex items-center gap-2 border-b pb-3 border-slate-100">
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600"></i> 보유 자격증
+          </h3>
+          <ul class="space-y-2.5 text-sm sm:text-base">
+            <li class="flex justify-between items-center bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+              <span class="font-bold text-slate-900">AICE (BASIC)</span>
+              <span class="text-xs sm:text-sm text-slate-500 font-medium">KT · 2024.12</span>
+            </li>
+            <li class="flex justify-between items-center bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+              <span class="font-bold text-slate-900">ADsP (데이터분석 준전문가)</span>
+              <span class="text-xs sm:text-sm text-slate-500 font-medium">한국데이터산업진흥원 · 2024.06</span>
+            </li>
+            <li class="flex justify-between items-center bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+              <span class="font-bold text-slate-900">SQLD (SQL 개발자)</span>
+              <span class="text-xs sm:text-sm text-slate-500 font-medium">한국데이터산업진흥원 · 2024.04</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 어학 & 글로벌 역량 : 점수 배지형 카드 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <h3 class="text-base font-bold text-slate-900 flex items-center gap-2 border-b pb-3 border-slate-100">
+            <i data-lucide="languages" class="w-5 h-5 text-blue-600"></i> 어학 &amp; 글로벌 역량
+          </h3>
+
+          <div class="space-y-3">
+            <!-- OPIc -->
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <div class="shrink-0 w-14 h-14 rounded-xl bg-blue-600 text-white flex flex-col items-center justify-center leading-none">
+                <span class="text-lg font-extrabold">IH</span>
+                <span class="text-[9px] opacity-80 mt-0.5">OPIc</span>
+              </div>
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold text-slate-900">OPIc</h4>
+                <p class="text-xs text-slate-500">영어 말하기 · Intermediate High</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">2026.02</p>
+              </div>
+            </div>
+
+            <!-- TOEIC Speaking -->
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <div class="shrink-0 w-14 h-14 rounded-xl bg-indigo-600 text-white flex flex-col items-center justify-center leading-none">
+                <span class="text-lg font-extrabold">180</span>
+                <span class="text-[9px] opacity-80 mt-0.5">AM</span>
+              </div>
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold text-slate-900">TOEIC Speaking</h4>
+                <p class="text-xs text-slate-500">Advanced Mid · 180점</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">2025.11</p>
+              </div>
+            </div>
+
+            <!-- 해외 교과목 (태국) -->
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100">
+              <div class="shrink-0 w-14 h-14 rounded-xl bg-white border border-blue-200 flex items-center justify-center">
+                <i data-lucide="globe-2" class="w-6 h-6 text-blue-600"></i>
+              </div>
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold text-slate-900">ASEAN Environment 해외 교과목</h4>
+                <p class="text-xs text-slate-500 flex items-center gap-1">
+                  <i data-lucide="map-pin" class="w-3 h-3"></i> 태국 · 2025.01 – 2025.02
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4 prose-table">
-        <h2 class="text-xl font-bold text-blue-900 border-l-4 border-blue-600 pl-3">2. PPT 발표자료 스토리라인 및 구조 설계 (9 Slides)</h2>
-        <div class="overflow-x-auto text-sm">
-          <table>
-            <thead>
-              <tr>
-                <th style="width: 15%;">Slide 번호</th>
-                <th style="width: 30%;">슬라이드 주제</th>
-                <th style="width: 55%;">핵심 전달 메시지 및 구성 내용</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>Slide 1</strong></td><td>표지 및 목차</td><td>프로젝트 개요 및 발표 흐름 가이드</td></tr>
-              <tr><td><strong>Slide 2</strong></td><td>제조 품질 관리 프로세스 및 부서별 업무</td><td>IQC (Gatekeeper), PQC (Monitor), OQC (Final Shield), CS (Frontier) 단계별 역할</td></tr>
-              <tr><td><strong>Slide 3</strong></td><td>품질 대응 체계: OCAP vs 8D Report</td><td>현장 즉각 조치(OCAP) vs 시스템적 근본 해결(8D) 매트릭스 비교</td></tr>
-              <tr><td><strong>Slide 4</strong></td><td>[사례 연구 1] 토요타 급발진 사태 현황 및 피해</td><td>샌디에이고 사고 개요, 리콜 1,000만 대 및 50억 달러 이상 재무적/신뢰도 손실 분석</td></tr>
-              <tr><td><strong>Slide 5</strong></td><td>[사례 연구 2] 문제 원인 규명 및 대응/조치</td><td>매트 간섭, 페달 마찰, BOS 안전 로직 부재 원인 도출 및 전사 품질위원회 신설 조치</td></tr>
-              <tr><td><strong>Slide 6</strong></td><td>[실습 1] 토요타 사례 기반 8D Report (D1~D4)</td><td>CFT 구축(D1), 5W2H 정의(D2), 출하정지/임시보수(D3), 3대 Root Cause 분석(D4)</td></tr>
-              <tr><td><strong>Slide 7</strong></td><td>[실습 2] 토요타 사례 기반 8D Report (D5~D8)</td><td>BOS 탑재 대책(D5), 100만 회 내구검증(D6), SOP/FMEA 개정(D7), Lesson Learned(D8)</td></tr>
-              <tr><td><strong>Slide 8</strong></td><td>품질 경영 표준과 개선 방법론</td><td>ISO 9001(표준 규격/체계)과 6 Sigma(DMAIC/산포 제거 도구)의 시너지 고찰</td></tr>
-              <tr><td><strong>Slide 9</strong></td><td>결론 및 품질 담당자로서의 시사점</td><td>사후 처리보다 사전 예방(FMEA) 및 신속한 고객 대응 체계의 중요성 정리</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-        <h2 class="text-xl font-bold text-blue-900 border-l-4 border-blue-600 pl-3">3. 실사례 적용: 토요타 급발진 사태 기반 8D Report (D1~D8)</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
-          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-            <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D1</span>
-            <h5 class="font-bold text-slate-900 pt-1 text-sm">Team (팀 구성)</h5>
-            <p class="text-slate-600">QA 총괄 주도 하에 파워트레인 설계팀, 전자제어(ECU)팀, 협력사(CTS), 북미 CS 대응팀 CFT 구성.</p>
-          </div>
-          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-            <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D2</span>
-            <h5 class="font-bold text-slate-900 pt-1 text-sm">Problem (문제 정의)</h5>
-            <p class="text-slate-600">5W2H 기반 정의: 북미 주행 렉서스 ES350 등에서 페달 복귀 불량으로 인한 통제 불능 가속 현상 발생.</p>
-          </div>
-          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-            <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D3</span>
-            <h5 class="font-bold text-slate-900 pt-1 text-sm">Containment (봉쇄 조치)</h5>
-            <p class="text-slate-600">사제 매트 탈거 공지, 의심 차량 긴급 점검, 신규 출하 홀딩(Hold), 페달 하단 임시 절단 및 패드 교체.</p>
-          </div>
-          <div class="p-4 bg-red-50 rounded-xl border border-red-200 space-y-1">
-            <span class="bg-red-600 text-white font-bold px-2 py-0.5 rounded text-[11px]">D4</span>
-            <h5 class="font-bold text-red-900 pt-1 text-sm">Root Cause (원인 규명)</h5>
-            <p class="text-red-700 font-medium">5-Why 분석: ①페달 기계적 마찰, ②매트 간섭, ③브레이크 우선 제어 로직(BOS) 누락.</p>
-          </div>
-          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-            <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D5</span>
-            <h5 class="font-bold text-slate-900 pt-1 text-sm">PCA (영구 대책 수립)</h5>
-            <p class="text-slate-600">페달 부품 재설계(Steel Insert 삽입), 전 차종 ECU 내 브레이크 오버라이드 시스템(BOS) 탑재 확정.</p>
-          </div>
-          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-            <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D6</span>
-            <h5 class="font-bold text-slate-900 pt-1 text-sm">Validate (실행 및 검증)</h5>
-            <p class="text-slate-600">전 세계 1,000만 대 리콜 S/W 업데이트 완료. 100만 회 신뢰성 내구 시험 통과 및 불량률 0% 확인.</p>
-          </div>
-          <div class="p-4 bg-red-50 rounded-xl border border-red-200 space-y-1">
-            <span class="bg-red-600 text-white font-bold px-2 py-0.5 rounded text-[11px]">D7</span>
-            <h5 class="font-bold text-red-900 pt-1 text-sm">Prevention (재발 방지)</h5>
-            <p class="text-red-700 font-medium">Design FMEA 안전 항목 개정, 글로벌 품질개선위원회 신설, 현장 권한 이양 및 신차 검증 주기 확장.</p>
-          </div>
-          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-            <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D8</span>
-            <h5 class="font-bold text-slate-900 pt-1 text-sm">Congratulate (팀 인정)</h5>
-            <p class="text-slate-600">CFT 및 협력사 기여 인정, Lessons Learned 보고서 전사 사업부 횡단 공유 후 공식 프로젝트 종결.</p>
-          </div>
-        </div>
-      </section>
-
-    </div>
-
-
-    <div id="tab-project2" class="tab-content space-y-8">
-      
-      <div class="flex items-center justify-between">
-        <button onclick="switchTab('home')" class="text-xs sm:text-sm font-semibold text-indigo-600 hover:underline flex items-center gap-1">
-          <i data-lucide="arrow-left" class="w-4 h-4"></i> Profile 메인으로 돌아가기
-        </button>
-        <span class="text-xs font-bold text-slate-400">PROJECT #2</span>
       </div>
+    </section>
 
-      <header class="bg-gradient-to-r from-slate-900 to-blue-900 text-white p-8 sm:p-10 rounded-2xl shadow-lg">
-        <div class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3">
-          Quality Control & Data Science
+    <!-- ===================== Leadership ===================== -->
+    <section class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+      <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+        <i data-lucide="users" class="w-5 h-5 text-indigo-600"></i> 리더십 및 기타 대외 활동
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-slate-700">
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+          <strong>충남대학교 정보통계학과</strong><br>
+          <span class="text-indigo-600 font-semibold text-xs">과동아리 BIG PI 회장</span>
+          <span class="block text-slate-400 text-xs mt-0.5">2023.01 – 2023.08</span>
         </div>
-        <h1 class="text-2xl sm:text-3xl font-extrabold mb-3">반도체 CMP 공정 OOS 원인 분석 및 SPC 관리 체계 고도화</h1>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl">
-          대용량 양산 데이터 및 개별 Wafer 계측 데이터 분석을 통해 Dressing 조건 변경에 따른 연마율 저하(Pad Glazing) 메커니즘을 통계적으로 입증하고, 실시간 I-MR 관리도 및 Nelson Rule 기반 OOC 탐지 체계를 수립한 프로젝트입니다.
-        </p>
-      </header>
-
-      <section class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
-          <span class="text-xs text-slate-400 font-bold block">Target 치수</span>
-          <strong class="text-lg sm:text-xl font-extrabold text-slate-800">5000 Å</strong>
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+          <strong>충남대학교 컴퓨터융합학부</strong><br>
+          <span class="text-indigo-600 font-semibold text-xs">과동아리 SPG 임원진</span>
+          <span class="block text-slate-400 text-xs mt-0.5">2024.01 – 2024.12</span>
         </div>
-        <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
-          <span class="text-xs text-slate-400 font-bold block">고객 규격 한계</span>
-          <strong class="text-lg sm:text-xl font-extrabold text-slate-800">LSL 4600 / USL 5400Å</strong>
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+          <strong>충남대학교 학생홍보대사</strong><br>
+          <span class="text-indigo-600 font-semibold text-xs">SNS팀원</span>
+          <span class="block text-slate-400 text-xs mt-0.5">2023.09 – 2024.08</span>
         </div>
-        <div class="bg-red-50 p-4 rounded-xl border border-red-200 text-center shadow-sm">
-          <span class="text-xs text-red-500 font-bold block">L-31 최대 초과 치수</span>
-          <strong class="text-lg sm:text-xl font-extrabold text-red-600">5477 Å (OOS)</strong>
-        </div>
-        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 text-center shadow-sm">
-          <span class="text-xs text-amber-600 font-bold block">L-31 공정능력지수</span>
-          <strong class="text-lg sm:text-xl font-extrabold text-amber-700">Cpk 0.62</strong>
-        </div>
-      </section>
-
-      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-indigo-600 pl-3">1. 통계적 공정 모델링 및 공정능력 분석</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-          <div class="space-y-3">
-            <h4 class="font-bold text-slate-900">베이스라인(L-01 ~ L-20) 통계 관리선 산출</h4>
-            <ul class="space-y-2 text-slate-600 bg-slate-50 p-4 rounded-xl border border-slate-100">
-              <li>• <strong>중심선 (CL):</strong> $$\text{CL} = \bar{X} = 5041.4\text{ Å}$$</li>
-              <li>• <strong>공정 산포 추정:</strong> $$\hat{\sigma} = \frac{\overline{MR}}{d_2} = \frac{24.4}{1.128} \approx 21.63\text{ Å}$$</li>
-              <li>• <strong>관리한계선 (3-Sigma Control Limits):</strong>
-                $$\text{UCL} = 5106.3\text{ Å}, \quad \text{LCL} = 4976.5\text{ Å}$$
-              </li>
-            </ul>
-          </div>
-
-          <div class="space-y-3 prose-table">
-            <h4 class="font-bold text-slate-900">공정능력지수 ($C_p, C_{pk}$) 해석</h4>
-            <table>
-              <thead>
-                <tr><th>지표</th><th>산출값</th><th>통계적 해석</th></tr>
-              </thead>
-              <tbody>
-                <tr><td><strong>$C_p$</strong></td><td><strong>1.62</strong> (>1.33)</td><td>공정 자체 산포는 규격 대비 충분히 우수함</td></tr>
-                <tr><td><strong>$C_{pk}$</strong></td><td><strong class="text-red-600">0.62</strong> (&lt;1.0)</td><td>평균이 USL로 248Å 이동(Shift)하여 부적합 발생</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <details class="text-xs">
-          <summary>🐍 Python I-MR 관리도 & Nelson Rule 판정 알고리즘 코드 펼치기 (Click)</summary>
-          <pre class="p-4 overflow-x-auto"><code class="language-python">import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-
-# 베이스라인 통계량 및 I-MR 계산
-baseline = df_prod.loc[0:19, 'CMP Post Thickness (Å)']
-cl = baseline.mean()
-mr_bar = baseline.diff().abs().mean()
-sigma_hat = mr_bar / 1.128
-ucl, lcl = cl + 3 * sigma_hat, cl - 3 * sigma_hat
-
-# Nelson Rules 감지
-ooc_rule1 = df_prod['CMP Post Thickness (Å)'] > ucl
-diffs = np.sign(df_prod['CMP Post Thickness (Å)'].diff())
-rule3_mask = (diffs.rolling(window=5).sum() == 5)
-</code></pre>
-        </details>
-      </section>
-
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 rounded-r-xl text-sm text-red-900 space-y-1">
-        <strong>💡 핵심 분석 인사이트 (OOC vs OOS 시점 불일치 입증):</strong>
-        <p>공정 관리선 이탈(OOC)은 <strong>L-27</strong>에서 최초 발생했으나, 실제 고객 규격 초과(OOS)는 <strong>L-31</strong>에서 발생했습니다. 즉, <strong>4~5개 Lot의 시간적 지연(Lead Time)</strong>이 존재했으며, 실시간 OOC 감지 체계 부재로 불량 유출을 사전 차단하지 못했음을 통계적으로 규명했습니다.</p>
       </div>
-
-    </div>
-
-
-    <div id="tab-project3" class="tab-content space-y-8">
-      
-      <div class="flex items-center justify-between">
-        <button onclick="switchTab('home')" class="text-xs sm:text-sm font-semibold text-indigo-600 hover:underline flex items-center gap-1">
-          <i data-lucide="arrow-left" class="w-4 h-4"></i> Profile 메인으로 돌아가기
-        </button>
-        <span class="text-xs font-bold text-slate-400">PROJECT #3</span>
-      </div>
-
-      <header class="bg-gradient-to-r from-blue-950 to-indigo-900 text-white p-8 sm:p-10 rounded-2xl shadow-lg">
-        <div class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3">
-          Semiconductor Quality Assurance & SQC Data Analysis
-        </div>
-        <h1 class="text-2xl sm:text-3xl font-extrabold mb-3">BGA DRAM Package Corner Chipping 불량 분석 및 SQC 데이터 모델링</h1>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl">
-          Sawing 공정의 잠재 결함(Micro-crack)과 물류 충격(Shock) 간 복합 상호작용(Interaction) 규명을 위한 가상 데이터 엔지니어링 및 통계적 공정 관리(p-Chart, Pareto) 프로젝트입니다.
-        </p>
-      </header>
-
-      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-indigo-600 pl-3">1. 3대 핵심 통계적 분석 결론</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
-            <span class="font-bold text-indigo-600 text-xs uppercase tracking-wider block">Insight 1</span>
-            <h4 class="font-bold text-slate-900">특수 원인 (Special Cause) 식별</h4>
-            <p class="text-slate-600 text-xs leading-relaxed">p-Chart 산출 결과 CL=0.73%, UCL=1.53%. LOT-04(4.3%), LOT-11(5.5%), LOT-18(4.3%) 등 3개 로트가 관리한계를 대폭 이탈함.</p>
-          </div>
-          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
-            <span class="font-bold text-indigo-600 text-xs uppercase tracking-wider block">Insight 2</span>
-            <h4 class="font-bold text-slate-900">모서리 응력 집중 입증 (Pareto 87.4%)</h4>
-            <p class="text-slate-600 text-xs leading-relaxed">전체 불량 중 87.4%(159개)가 90도 Corner 부위에 집중되어 외부 충격 에너지가 모서리 미세 크랙에 집중됨을 규명.</p>
-          </div>
-          <div class="p-4 bg-red-50 rounded-xl border border-red-200 space-y-2">
-            <span class="font-bold text-red-600 text-xs uppercase tracking-wider block">Insight 3</span>
-            <h4 class="font-bold text-red-900">결합 상호작용 (Interaction Effect)</h4>
-            <p class="text-red-700 text-xs leading-relaxed">Blade 마모 단독(0.25%) 또는 충격 단독(0.50%) 시엔 정상이나, <strong>동시 발생 시 불량률 4.70%로 폭증</strong>함을 검증.</p>
-          </div>
-        </div>
-
-        <details class="text-xs">
-          <summary>🐍 Python p-Chart 및 2D 교차 상호작용 피벗팅 분석 코드 펼치기 (Click)</summary>
-          <pre class="p-4 overflow-x-auto"><code class="language-python">import pandas as pd
-import numpy as np
-
-# p-Chart 관리한계선 자동 산출
-p_bar = sum(c_defects) / (num_lots * 1000)
-ucl = p_bar + 3 * np.sqrt(p_bar * (1 - p_bar) / 1000)
-lcl = max(0, p_bar - 3 * np.sqrt(p_bar * (1 - p_bar) / 1000))
-
-# 2D 상호작용 교차 분석 집계
-# Blade Cut Count (>40,000) x ShockWatch High (>25G) -> Defect Explosion (>4.7%)
-</code></pre>
-        </details>
-      </section>
-
-    </div>
+    </section>
 
   </main>
 
@@ -625,45 +399,32 @@ lcl = max(0, p_bar - 3 * np.sqrt(p_bar * (1 - p_bar) / 1000))
     <p>© 2026 KIM DABIN. All Rights Reserved. Hosted on GitHub Pages.</p>
   </footer>
 
-  <script>
-    function switchTab(tabId) {
-      // Hide all tabs
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      // Deactivate all nav buttons
-      document.querySelectorAll('.nav-btn').forEach(btn => {
-        btn.classList.remove('bg-indigo-50', 'text-indigo-600');
-        btn.classList.add('text-slate-600');
-      });
+  <!-- ===================== 부트캠프 팝업 ===================== -->
+  <div id="bootcamp-modal" class="fixed inset-0 z-[100] items-center justify-center p-3 sm:p-6">
+    <div id="modal-backdrop" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+    <div class="relative bg-slate-50 w-full max-w-4xl max-h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+      <div class="bg-white border-b border-slate-200 px-5 sm:px-6 pt-4 pb-3 space-y-3">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h2 id="modal-title" class="text-lg sm:text-xl font-extrabold text-slate-900"></h2>
+            <p id="modal-subtitle" class="text-xs sm:text-sm text-slate-500 mt-0.5"></p>
+          </div>
+          <button onclick="closeBootcamp()" class="shrink-0 w-8 h-8 rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-700 flex items-center justify-center transition">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+        <nav id="modal-tabs" class="flex flex-wrap items-center gap-1.5"></nav>
+      </div>
+      <div id="modal-body" class="overflow-y-auto px-5 sm:px-6 py-5 grow"></div>
+    </div>
+  </div>
 
-      // Show selected tab
-      const targetTab = document.getElementById('tab-' + tabId);
-      if (targetTab) {
-        targetTab.classList.add('active');
-      }
-
-      // Activate corresponding nav button
-      const activeNav = document.getElementById('nav-' + tabId);
-      if (activeNav) {
-        activeNav.classList.remove('text-slate-600');
-        activeNav.classList.add('bg-indigo-50', 'text-indigo-600');
-      }
-
-      // Scroll to top smoothly
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-      // Typeset MathJax formulas if available
-      if (window.MathJax && window.MathJax.typesetPromise) {
-        window.MathJax.typesetPromise();
-      }
-    }
-
-    // Initialize Lucide Icons & Syntax Highlighting
-    document.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
-      hljs.highlightAll();
-    });
-  </script>
+  <!-- 분리된 스크립트 : 팝업 콘텐츠(부트캠프 + 경력) + 팝업 로직 -->
+  <script src="assets/semiconductor.js"></script>
+  <script src="assets/defense.js"></script>
+  <script src="assets/robotech.js"></script>
+  <script src="assets/georgia.js"></script>
+  <script src="assets/quantomic.js"></script>
+  <script src="assets/main.js"></script>
 </body>
 </html>
