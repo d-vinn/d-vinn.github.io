@@ -33,7 +33,7 @@ window.BOOTCAMPS.defense = {
           <h4 class="text-lg font-bold text-emerald-900 border-l-4 border-emerald-600 pl-3">위협 정의</h4>
           <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg text-sm font-medium text-slate-800">
             항공기 제조·정비 단계 또는 지상 임무계획 데이터 로딩 중, 정상 버스 프로토콜 규격으로 위장하여 침투하는
-            <strong>‘항공전자 공급망 잠복형 사이버/물리 교란(LotL 공격)’</strong>.
+            <strong>‘항공전자 공급망 잠복형 사이버/물리 교란(LotL 공격)’</strong>
           </div>
         </section>
 
@@ -41,7 +41,7 @@ window.BOOTCAMPS.defense = {
           <h4 class="text-lg font-bold text-emerald-900 border-l-4 border-emerald-600 pl-3">무기체계 분류 및 운용개념</h4>
           <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm">
             <h5 class="font-bold text-slate-900 mb-1">분류</h5>
-            <p class="text-slate-600">유·무인 복합체계 및 차세대 지휘통제기 적용 — 비행체 내장형 능동 사이버/전자 방어체계.</p>
+            <p class="text-slate-600">유·무인 복합체계 및 차세대 지휘통제기 적용 — 비행체 내장형 능동 사이버/전자 방어체계</p>
           </div>
           <div>
             <h5 class="font-bold text-slate-900 text-sm mb-2">운용 흐름</h5>
@@ -67,41 +67,41 @@ window.BOOTCAMPS.defense = {
         </section>
 
         <section class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-          <h4 class="text-lg font-bold text-emerald-900 border-l-4 border-emerald-600 pl-3">주요 핵심 요구도 (5)</h4>
+          <h4 class="text-lg font-bold text-emerald-900 border-l-4 border-emerald-600 pl-3">주요 핵심 요구도 5가지</h4>
           <div class="space-y-3">
             <div class="flex gap-3">
               <span class="shrink-0 w-7 h-7 rounded-full bg-emerald-700 text-white text-xs font-bold flex items-center justify-center">1</span>
               <div>
                 <h5 class="font-bold text-slate-900 text-sm">실시간 버스 모니터링 &amp; 저지연성</h5>
-                <p class="text-slate-600 text-xs sm:text-sm mt-1">패킷 검사 지연 $\\le 0.05\\text{ ms}$, 제어 주기 영향 지터 최소화.</p>
+                <p class="text-slate-600 text-xs sm:text-sm mt-1">패킷 검사 지연 $\\le 0.05\\text{ ms}$, 제어 주기 영향 지터 최소화</p>
               </div>
             </div>
             <div class="flex gap-3">
               <span class="shrink-0 w-7 h-7 rounded-full bg-emerald-700 text-white text-xs font-bold flex items-center justify-center">2</span>
               <div>
                 <h5 class="font-bold text-slate-900 text-sm">이상 탐지율 &amp; 오경보율</h5>
-                <p class="text-slate-600 text-xs sm:text-sm mt-1">LotL 비인가 명령 탐지율 $\\ge 99.9\\%$, 오경보율 $\\le 10^{-6}$.</p>
+                <p class="text-slate-600 text-xs sm:text-sm mt-1">LotL 비인가 명령 탐지율 $\\ge 99.9\\%$, 오경보율 $\\le 10^{-6}$</p>
               </div>
             </div>
             <div class="flex gap-3">
               <span class="shrink-0 w-7 h-7 rounded-full bg-emerald-700 text-white text-xs font-bold flex items-center justify-center">3</span>
               <div>
                 <h5 class="font-bold text-slate-900 text-sm">결함 격리 &amp; 무중단 복구</h5>
-                <p class="text-slate-600 text-xs sm:text-sm mt-1">오염 LRU 발생 시 1 ms 이내 분리 및 백업 채널 즉시 전환.</p>
+                <p class="text-slate-600 text-xs sm:text-sm mt-1">오염 LRU 발생 시 1 ms 이내 분리 및 백업 채널 즉시 전환</p>
               </div>
             </div>
             <div class="flex gap-3">
               <span class="shrink-0 w-7 h-7 rounded-full bg-emerald-700 text-white text-xs font-bold flex items-center justify-center">4</span>
               <div>
                 <h5 class="font-bold text-slate-900 text-sm">공급망 무결성 검증</h5>
-                <p class="text-slate-600 text-xs sm:text-sm mt-1">HW 기반 보안 부팅(Root of Trust) 및 데이터 무결성 검증.</p>
+                <p class="text-slate-600 text-xs sm:text-sm mt-1">HW 기반 보안 부팅(Root of Trust) 및 데이터 무결성 검증</p>
               </div>
             </div>
             <div class="flex gap-3">
               <span class="shrink-0 w-7 h-7 rounded-full bg-emerald-700 text-white text-xs font-bold flex items-center justify-center">5</span>
               <div>
                 <h5 class="font-bold text-slate-900 text-sm">SWaP 제약</h5>
-                <p class="text-slate-600 text-xs sm:text-sm mt-1">추가 중량 3.5 kg 이하, 소비 전력 60 W 이하.</p>
+                <p class="text-slate-600 text-xs sm:text-sm mt-1">추가 중량 3.5 kg 이하, 소비 전력 60 W 이하</p>
               </div>
             </div>
           </div>
@@ -133,13 +133,13 @@ window.BOOTCAMPS.defense = {
               <h5 class="font-bold text-slate-900 mb-1">방식 — DRFM</h5>
               <p class="text-slate-600">
                 자동화 신호처리를 수행하는 AESA 레이더에 대응하기 위해 수신 신호를 디지털로 복제·변조하는
-                <strong>DRFM (Digital Radio Frequency Memory)</strong> 채택.
+                <strong>DRFM (Digital Radio Frequency Memory)</strong> 채택
               </p>
             </div>
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
               <h5 class="font-bold text-slate-900 mb-1">주파수 대역 — S-band</h5>
               <p class="text-slate-600">
-                적 레이다 동작 주파수($\\lambda = 0.1\\text{ m}$)에 맞춘 <strong>S-band (중심 주파수 3 GHz)</strong> 선정.
+                적 레이다 동작 주파수($\\lambda = 0.1\\text{ m}$)에 맞춘 <strong>S-band (중심 주파수 3 GHz)</strong> 선정
               </p>
             </div>
           </div>
@@ -174,7 +174,7 @@ window.BOOTCAMPS.defense = {
               </tbody>
             </table>
             <p class="text-xs text-slate-500 mt-1">
-              → 레이다 최근접 거리까지 아군 재밍 신호의 우세성 검증.
+              → 레이다 최근접 거리까지 아군 재밍 신호의 우세성 검증
             </p>
           </div>
         </section>
@@ -202,10 +202,10 @@ window.BOOTCAMPS.defense = {
           <h4 class="text-lg font-bold text-teal-900 border-l-4 border-teal-600 pl-3">정비 데이터 전처리 및 신뢰도 지표 산출</h4>
           <p class="text-sm text-slate-600">
             KF-21 시제기 3대(001~003호기) 정비일지 데이터를 바탕으로 기체별 MTBF, MTTR, 고유가용도($A_o$) 산출 및
-            작전요구치($ROC \\ge 0.93$) 충족 여부 평가.
+            작전요구치($ROC \\ge 0.93$) 충족 여부 평가
           </p>
           <div class="bg-slate-50 border-l-4 border-teal-500 p-4 rounded-r-lg text-sm text-slate-700">
-            <strong>민감도 분석:</strong> MTTR 1시간 단축 시 가용도($A_o$) 변화율 분석.
+            <strong>민감도 분석:</strong> MTTR 1시간 단축 시 가용도($A_o$) 변화율 분석
           </div>
         </section>
 
@@ -215,19 +215,19 @@ window.BOOTCAMPS.defense = {
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
               <span class="font-bold text-teal-700 text-xs uppercase tracking-wider block">HW / 설계</span>
               <p class="text-slate-600 text-xs leading-relaxed">
-                Quick-Turn Fastener 및 블라인드 메이트 커넥터 적용 → O-Level LRU 1:1 신속 맞교체.
+                Quick-Turn Fastener 및 블라인드 메이트 커넥터 적용 → O-Level LRU 1:1 신속 맞교체
               </p>
             </div>
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
               <span class="font-bold text-teal-700 text-xs uppercase tracking-wider block">스마트 예지정비</span>
               <p class="text-slate-600 text-xs leading-relaxed">
-                BIT 고도화, CBM+/PHM 알고리즘, AR 기반 3D 전자식 기술교범(IETM) 도입.
+                BIT 고도화, CBM+/PHM 알고리즘, AR 기반 3D 전자식 기술교범(IETM) 도입
               </p>
             </div>
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
               <span class="font-bold text-teal-700 text-xs uppercase tracking-wider block">정비 / 군수지원</span>
               <p class="text-slate-600 text-xs leading-relaxed">
-                3단계 정비 체계(O-I-D Level) 최적화 및 PBL 연계 안전재고 확보.
+                3단계 정비 체계(O-I-D Level) 최적화 및 PBL 연계 안전재고 확보
               </p>
             </div>
           </div>
@@ -242,7 +242,7 @@ window.BOOTCAMPS.defense = {
                 <h5 class="font-bold text-slate-900 text-sm">엄격한 이상치 처리 원칙 (임의 복원 지양)</h5>
                 <p class="text-slate-600 text-xs sm:text-sm mt-1">
                   음수 수리시간은 임의 추정(+2시간)으로 복원하지 않고, 명백한 입력 오류 데이터로 간주하여
-                  반드시 제거(Drop)해야 지표 왜곡을 막을 수 있음.
+                  반드시 제거(Drop)해야 지표 왜곡을 막을 수 있음
                 </p>
               </div>
             </div>
@@ -251,8 +251,8 @@ window.BOOTCAMPS.defense = {
               <div>
                 <h5 class="font-bold text-slate-900 text-sm">표준 산출 공식 및 Fleet 대표값 기준 준수</h5>
                 <ul class="list-disc list-inside text-slate-600 text-xs sm:text-sm mt-1 space-y-0.5">
-                  <li>MTBF 산출: 운용시간에서 정비시간을 차감하지 않고 $\\text{총 운용시간} / \\text{고장건수}$로 계산.</li>
-                  <li>Fleet 대표값: 기체별 평균을 다시 평균 내지 않고 전체 데이터를 통합(Aggregate)하여 산출.</li>
+                  <li>MTBF 산출: 운용시간에서 정비시간을 차감하지 않고 총 운용시간 / 고장건수 로 계산</li>
+                  <li>Fleet 대표값: 기체별 평균을 다시 평균 내지 않고 전체 데이터를 통합(Aggregate)하여 산출</li>
                 </ul>
               </div>
             </div>
@@ -261,9 +261,9 @@ window.BOOTCAMPS.defense = {
               <div>
                 <h5 class="font-bold text-slate-900 text-sm">민감도 분석의 변수 통제 및 결과 해석</h5>
                 <ul class="list-disc list-inside text-slate-600 text-xs sm:text-sm mt-1 space-y-0.5">
-                  <li>변수 통제: MTTR 단축 효과 분석 시 MTBF(200시간)는 상수로 고정하고 MTTR만 단축.</li>
-                  <li>결과 해석: MTBF가 MTTR보다 훨씬 커서 1시간 단축에 따른 $A_o$ 증가폭은 약 $+0.47\\%p$로 제한적.
-                      이미 요구도($0.93$)를 충족하므로 필수 조치가 아닌 추가 운용 여유도 확보 차원의 개선으로 해석하는 것이 타당.</li>
+                  <li>변수 통제: MTTR 단축 효과 분석 시 MTBF(200시간)는 상수로 고정하고 MTTR만 단축해야함</li>
+                  <li>결과 해석: MTBF가 MTTR보다 훨씬 커서 1시간 단축에 따른 $A_o$ 증가폭은 약 $+0.47\\%p$로 제한적임.
+                      이미 요구도($0.93$)를 충족하므로 필수 조치가 아닌 추가 운용 여유도 확보 차원의 개선으로 해석하는 것이 타당함</li>
                 </ul>
               </div>
             </div>

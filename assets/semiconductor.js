@@ -59,42 +59,42 @@ window.BOOTCAMPS.semiconductor = {
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
               <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D1</span>
               <h5 class="font-bold text-slate-900 pt-1 text-sm">Team</h5>
-              <p class="text-slate-600">QA 총괄 주도로 설계·전자제어(ECU)·협력사·북미 CS 대응팀 CFT 구성.</p>
+              <p class="text-slate-600">QA 총괄 주도로 설계·전자제어(ECU)·협력사·북미 CS 대응팀 CFT 구성</p>
             </div>
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
               <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D2</span>
               <h5 class="font-bold text-slate-900 pt-1 text-sm">Problem</h5>
-              <p class="text-slate-600">5W2H 정의: 북미 주행 차량에서 페달 복귀 불량으로 통제 불능 가속 발생.</p>
+              <p class="text-slate-600">5W2H 정의: 북미 주행 차량에서 페달 복귀 불량으로 통제 불능 가속 발생</p>
             </div>
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
               <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D3</span>
               <h5 class="font-bold text-slate-900 pt-1 text-sm">Containment</h5>
-              <p class="text-slate-600">사제 매트 탈거 공지, 신규 출하 홀딩, 페달 임시 보수.</p>
+              <p class="text-slate-600">사제 매트 탈거 공지, 신규 출하 홀딩, 페달 임시 보수</p>
             </div>
             <div class="p-4 bg-red-50 rounded-xl border border-red-200 space-y-1">
               <span class="bg-red-600 text-white font-bold px-2 py-0.5 rounded text-[11px]">D4</span>
               <h5 class="font-bold text-red-900 pt-1 text-sm">Root Cause</h5>
-              <p class="text-red-700 font-medium">5-Why: ①페달 기계적 마찰 ②매트 간섭 ③브레이크 우선 제어(BOS) 누락.</p>
+              <p class="text-red-700 font-medium">5-Why: ①페달 기계적 마찰 ②매트 간섭 ③브레이크 우선 제어(BOS) 누락</p>
             </div>
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
               <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D5</span>
               <h5 class="font-bold text-slate-900 pt-1 text-sm">PCA</h5>
-              <p class="text-slate-600">페달 부품 재설계(Steel Insert), 전 차종 ECU에 BOS 탑재 확정.</p>
+              <p class="text-slate-600">페달 부품 재설계(Steel Insert), 전 차종 ECU에 BOS 탑재 확정</p>
             </div>
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
               <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D6</span>
               <h5 class="font-bold text-slate-900 pt-1 text-sm">Validate</h5>
-              <p class="text-slate-600">1,000만 대 리콜 S/W 업데이트, 100만 회 내구 시험 통과.</p>
+              <p class="text-slate-600">1,000만 대 리콜 S/W 업데이트, 100만 회 내구 시험 통과</p>
             </div>
             <div class="p-4 bg-red-50 rounded-xl border border-red-200 space-y-1">
               <span class="bg-red-600 text-white font-bold px-2 py-0.5 rounded text-[11px]">D7</span>
               <h5 class="font-bold text-red-900 pt-1 text-sm">Prevention</h5>
-              <p class="text-red-700 font-medium">Design FMEA 개정, 글로벌 품질개선위원회 신설, 검증 주기 확장.</p>
+              <p class="text-red-700 font-medium">Design FMEA 개정, 글로벌 품질개선위원회 신설, 검증 주기 확장</p>
             </div>
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
               <span class="bg-blue-900 text-white font-bold px-2 py-0.5 rounded text-[11px]">D8</span>
               <h5 class="font-bold text-slate-900 pt-1 text-sm">Congratulate</h5>
-              <p class="text-slate-600">CFT·협력사 기여 인정, Lessons Learned 전사 공유 후 종결.</p>
+              <p class="text-slate-600">CFT·협력사 기여 인정, Lessons Learned 전사 공유 후 종결</p>
             </div>
           </div>
         </section>
@@ -161,31 +161,12 @@ window.BOOTCAMPS.semiconductor = {
               </table>
             </div>
           </div>
-
-          <details class="text-xs">
-            <summary>🐍 Python I-MR 관리도 &amp; Nelson Rule 판정 코드 (Click)</summary>
-            <pre class="p-4 overflow-x-auto"><code class="language-python">import pandas as pd
-import numpy as np
-
-# 베이스라인 통계량 및 I-MR 계산
-baseline = df_prod.loc[0:19, 'CMP Post Thickness (Å)']
-cl = baseline.mean()
-mr_bar = baseline.diff().abs().mean()
-sigma_hat = mr_bar / 1.128
-ucl, lcl = cl + 3 * sigma_hat, cl - 3 * sigma_hat
-
-# Nelson Rules 감지
-ooc_rule1 = df_prod['CMP Post Thickness (Å)'] &gt; ucl
-diffs = np.sign(df_prod['CMP Post Thickness (Å)'].diff())
-rule3_mask = (diffs.rolling(window=5).sum() == 5)
-</code></pre>
-          </details>
         </section>
 
         <div class="bg-red-50 border-l-4 border-red-500 p-5 rounded-r-xl text-sm text-red-900 space-y-1">
           <strong>💡 핵심 인사이트 (OOC vs OOS 시점 불일치):</strong>
           <p>관리선 이탈(OOC)은 <strong>L-27</strong>에서 최초 발생했으나 규격 초과(OOS)는 <strong>L-31</strong>에서 발생 —
-          <strong>4~5개 Lot의 시간 지연</strong>이 존재했으며, 실시간 OOC 감지 체계 부재로 불량 유출을 사전 차단하지 못했음을 규명.</p>
+          <strong>4~5개 Lot의 시간 지연</strong>이 존재했으며, 실시간 OOC 감지 체계 부재로 불량 유출을 사전 차단하지 못했음을 규명</p>
         </div>
       `
     },
@@ -213,34 +194,19 @@ rule3_mask = (diffs.rolling(window=5).sum() == 5)
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
               <span class="font-bold text-indigo-600 text-xs uppercase tracking-wider block">Insight 1</span>
               <h5 class="font-bold text-slate-900">특수 원인 식별</h5>
-              <p class="text-slate-600 text-xs leading-relaxed">p-Chart CL=0.73%, UCL=1.53%. LOT-04(4.3%), LOT-11(5.5%), LOT-18(4.3%) 3개 로트가 관리한계 이탈.</p>
+              <p class="text-slate-600 text-xs leading-relaxed">p-Chart CL=0.73%, UCL=1.53%. LOT-04(4.3%), LOT-11(5.5%), LOT-18(4.3%) 3개 로트가 관리한계 이탈</p>
             </div>
             <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
               <span class="font-bold text-indigo-600 text-xs uppercase tracking-wider block">Insight 2</span>
               <h5 class="font-bold text-slate-900">모서리 응력 집중 (Pareto 87.4%)</h5>
-              <p class="text-slate-600 text-xs leading-relaxed">전체 불량의 87.4%(159개)가 90° Corner에 집중 — 충격 에너지가 모서리 미세 크랙에 집중됨을 규명.</p>
+              <p class="text-slate-600 text-xs leading-relaxed">전체 불량의 87.4%(159개)가 90° Corner에 집중 — 충격 에너지가 모서리 미세 크랙에 집중됨을 규명</p>
             </div>
             <div class="p-4 bg-red-50 rounded-xl border border-red-200 space-y-2">
               <span class="font-bold text-red-600 text-xs uppercase tracking-wider block">Insight 3</span>
               <h5 class="font-bold text-red-900">결합 상호작용 (Interaction)</h5>
-              <p class="text-red-700 text-xs leading-relaxed">Blade 마모 단독(0.25%)·충격 단독(0.50%)은 정상이나 <strong>동시 발생 시 불량률 4.70%로 폭증</strong>.</p>
+              <p class="text-red-700 text-xs leading-relaxed">Blade 마모 단독(0.25%)·충격 단독(0.50%)은 정상이나 <strong>동시 발생 시 불량률 4.70%로 폭증</strong></p>
             </div>
           </div>
-
-          <details class="text-xs">
-            <summary>🐍 Python p-Chart &amp; 2D 상호작용 분석 코드 (Click)</summary>
-            <pre class="p-4 overflow-x-auto"><code class="language-python">import pandas as pd
-import numpy as np
-
-# p-Chart 관리한계선 자동 산출
-p_bar = sum(c_defects) / (num_lots * 1000)
-ucl = p_bar + 3 * np.sqrt(p_bar * (1 - p_bar) / 1000)
-lcl = max(0, p_bar - 3 * np.sqrt(p_bar * (1 - p_bar) / 1000))
-
-# 2D 상호작용 교차 분석
-# Blade Cut Count (&gt;40,000) x ShockWatch High (&gt;25G) -&gt; Defect Explosion (&gt;4.7%)
-</code></pre>
-          </details>
         </section>
       `
     }
