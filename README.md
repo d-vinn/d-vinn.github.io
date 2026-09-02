@@ -1,8 +1,5 @@
 # 👋 안녕하세요, AI & Data Analyst 김다빈입니다.
 
-> **"통계학적 통찰과 AI 기술을 융합하여 실질적인 가치를 창출합니다."**  
-> 충남대학교에서 정보통계학과 인공지능학을 복수전공했고, 데이터 기반의 문제 해결과 AI 모델링(비전, 임베디드)을 연구하고 있습니다.
-
 <br>
 
 ## 📬 Contact & Links
@@ -15,15 +12,14 @@
 ## 🛠 Tech Stack
 | 구분 | 기술 / 도구 |
 | :--- | :--- |
-| **Languages** | Python, C/C++, SQL, R |
+| **Languages** | Python, C/C++, SQL |
 | **AI / Data** | PyTorch, Scikit-learn, OpenCV, Pandas, NumPy |
 | **Web / Backend** | FastAPI, Flask, Next.js, MySQL |
-| **Tools & Cloud** | Git, Docker, AWS, Linux |
+| **Tools & Cloud** | Git, AWS, Linux |
 
 ---
 
 ## 🚀 Featured Projects
-*(깃허브 레포지토리와 연결하여 사용하세요)*
 
 ### 1. [프로젝트 명 1 (GitHub 링크 입력)](https://github.com)
 - **개요**: 프로젝트의 핵심 목적 및 개발 배경 한 줄 설명
