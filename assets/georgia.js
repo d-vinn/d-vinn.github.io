@@ -20,10 +20,9 @@ window.BOOTCAMPS.georgia = {
           <div class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase mb-3">
             Vision AI · Pose Estimation · Barrier-Free Web
           </div>
-          <h3 class="text-xl sm:text-2xl font-extrabold mb-2">B-is-able — 시각장애인을 위한 실시간 AI 운동 자세 피드백 웹 서비스</h3>
+          <h3 class="text-xl sm:text-2xl font-extrabold mb-2">B-is-able : 시각장애인을 위한 실시간 AI 운동 자세 피드백 웹 서비스</h3>
           <p class="text-slate-300 text-sm leading-relaxed">
-            <strong>B-is-able (Blind is Able &amp; Visible)</strong> — 웹캠 기반 비전 AI로 운동 자세의 관절 각도를 실시간 추출하고,
-            모델이 도출한 정상 궤적과의 오차를 즉시 음성(TTS)으로 안내하는 Barrier-Free 웹 헬스 트레이너
+            <strong>B-is-able (Blind is Able &amp; Visible)</strong> - 웹캠 기반 비전 AI로 운동 자세 관절 각도 실시간 추출 및 음성(TTS)로 피드백 제공 (Barrier-Free 웹 헬스 트레이너)
           </p>
           <div class="flex flex-wrap gap-2 mt-4 text-[11px] font-semibold">
             <span class="bg-white/15 px-2.5 py-1 rounded-full">3인 팀 프로젝트</span>
@@ -35,11 +34,11 @@ window.BOOTCAMPS.georgia = {
           <h4 class="text-lg font-bold text-indigo-900 border-l-4 border-indigo-600 pl-3">1. 프로젝트 개요</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-              <h5 class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-1">Vision / Pose</h5>
+              <h5 class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-1">Vision</h5>
               <p class="text-slate-600">MediaPipe Pose, OpenCV</p>
             </div>
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-              <h5 class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-1">Machine Learning</h5>
+              <h5 class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-1">머신러닝</h5>
               <p class="text-slate-600">Python, Scikit-learn (GradientBoostingRegressor, MultiOutputRegressor, GridSearchCV), Pandas, NumPy</p>
             </div>
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
@@ -117,7 +116,7 @@ window.BOOTCAMPS.georgia = {
               <h5 class="font-bold text-slate-900 mb-1">모델 선정 &amp; 파이프라인</h5>
               <ul class="list-disc list-inside text-slate-600 space-y-0.5">
                 <li>관절 간 비선형 상호작용 대응 → <strong>Gradient Boosting Regressor</strong></li>
-                <li>좌/우 불균형 독립 감지 → <code>MultiOutputRegressor</code> 래핑</li>
+                <li>좌/우 불균형 독립 감지 → <strong>MultiOutputRegressor</strong></li>
               </ul>
             </div>
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
@@ -159,9 +158,9 @@ window.BOOTCAMPS.georgia = {
         <section class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4 mb-6">
           <h4 class="text-lg font-bold text-indigo-900 border-l-4 border-indigo-600 pl-3">5. 실시간 웹 서비스 아키텍처 (Django)</h4>
           <ul class="space-y-2 text-sm text-slate-600">
-            <li class="flex gap-2"><span class="text-indigo-500 font-bold">•</span> <span><strong>FE–BE 연동:</strong> 클라이언트(웹캠)에서 Canvas API로 주기적 프레임 캡처 → Django <code>analyze_video/</code> 엔드포인트로 POST 전송</span></li>
+            <li class="flex gap-2"><span class="text-indigo-500 font-bold">•</span> <span><strong>FE–BE 연동:</strong> 클라이언트(웹캠)에서 Canvas API로 주기적 프레임 캡처 → Django 엔드포인트로 POST 전송</span></li>
             <li class="flex gap-2"><span class="text-indigo-500 font-bold">•</span> <span><strong>실시간 추론·판정:</strong> OpenCV &amp; MediaPipe로 관절 각도 연산 → 학습 모델로 정자세 기준 각도 예측 → 실제 각도와 임계치 오차 비교</span></li>
-            <li class="flex gap-2"><span class="text-indigo-500 font-bold">•</span> <span><strong>음성(TTS) 알림 쓰레딩:</strong> 불균형 감지 시 음성 안내 + 화면 텍스트 출력(개발자 확인용). <code>Thread</code>로 비동기 재생하여 메인 추론 루프 지연 방지</span></li>
+            <li class="flex gap-2"><span class="text-indigo-500 font-bold">•</span> <span><strong>음성(TTS) 알림 쓰레딩:</strong> 불균형 감지 시 음성 안내 + 화면 텍스트 출력(개발자 확인용) Thread로 비동기 재생하여 메인 추론 루프 지연 방지</span></li>
           </ul>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
