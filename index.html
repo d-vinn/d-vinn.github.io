@@ -246,6 +246,42 @@
 
     </section>
 
+    <!-- ===================== Project ===================== -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-bold text-neutral-900 flex items-center gap-2">
+        <i data-lucide="folder-git-2" class="w-5 h-5 text-indigo-600"></i> Project
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- 투어나잇(TourNight): 클릭 시 팝업 -->
+        <button onclick="openBootcamp('tournight')" class="w-full text-left bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-neutral-400 transition group">
+          <div>
+            <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 bg-neutral-400 rounded-full"></span> 투어나잇 (TourNight)
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-500 font-normal mt-1">대전 특화 외국인 야간관광 다국어 웹 — 2026 관광데이터 활용 공모전 (팀 무한대전)</p>
+          </div>
+          <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-neutral-600 bg-neutral-100 border border-neutral-200 rounded-lg px-2.5 py-1 group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition">
+            자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- 위성 SBC 시뮬레이터: 클릭 시 팝업 -->
+        <button onclick="openBootcamp('satellite')" class="w-full text-left bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-neutral-400 transition group">
+          <div>
+            <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 bg-neutral-400 rounded-full"></span> 위성 SBC 실시간 RMS 스케줄러 &amp; FDIR 시뮬레이터
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-500 font-normal mt-1">소프트웨어 정의 위성 온보드 컴퓨터 — 결정론적 하드 실시간성 &amp; 자율 고장 복구</p>
+          </div>
+          <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-neutral-600 bg-neutral-100 border border-neutral-200 rounded-lg px-2.5 py-1 group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition">
+            자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+      </div>
+    </section>
+
     <!-- ===================== Honors / Certs / Languages ===================== -->
     <section class="space-y-6">
       <h2 class="text-xl font-bold text-neutral-900 flex items-center gap-2">
@@ -464,6 +500,8 @@
   <script src="assets/quantomic.js"></script>
   <script src="assets/thesis.js"></script>
   <script src="assets/ibs.js"></script>
+  <script src="assets/tournight.js"></script>
+  <script src="assets/satellite.js"></script>
   <script src="assets/main.js"></script>
 </body>
 </html>
