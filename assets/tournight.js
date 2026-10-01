@@ -94,7 +94,7 @@ window.BOOTCAMPS.tournight = {
         </section>
  
 
-
+    `
     }
   ]
 };
