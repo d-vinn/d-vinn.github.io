@@ -1,491 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KIM DABIN | Portfolio</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']]
-      },
-      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
-    };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
-
-  <!-- 분리된 스타일 -->
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8">
+  <title>김다빈 | AI &amp; Data Analyst</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="김다빈, AI, Data Analyst, Portfolio" name="keywords">
+  <meta content="AI와 데이터 분석 프로젝트 포트폴리오" name="description">
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="bg-white text-neutral-900 antialiased selection:bg-neutral-200 selection:text-neutral-900 min-h-screen flex flex-col">
-
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-neutral-200">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <button onclick="scrollToTop()" class="font-extrabold text-lg text-indigo-600 tracking-tight flex items-center gap-2 hover:opacity-80 transition">
-        DABIN.DEV
-      </button>
-
-      <nav class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-neutral-500">
-        <span class="hidden sm:inline">AI &amp; Data Analyst</span>
-        <a href="https://github.com/d-vinn" target="_blank" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-neutral-600 hover:bg-neutral-100 transition">
-          <i data-lucide="github" class="w-4 h-4"></i> <span class="hidden sm:inline">GitHub</span>
-        </a>
-      </nav>
+<body id="page-top">
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">DABIN.DEV</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link js-scroll active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#service">Tech Stack</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#work">Projects</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#blog">Education &amp; Awards</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 py-10 w-full space-y-12">
-
-    <!-- ===================== Intro ===================== -->
-    <section class="space-y-4 pt-2">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-200 border border-neutral-300 text-neutral-700 text-xs font-semibold">
-        <span class="w-2 h-2 rounded-full bg-neutral-400"></span>
-        AI &amp; Data Analyst
-      </div>
-
-      <div class="space-y-2">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
-          안녕하세요, <span class="text-indigo-600">김다빈</span>입니다.
-        </h1>
-        <p class="text-base sm:text-lg text-neutral-600 leading-relaxed">
-          #통계적 사고 #NLP/Vision/Embedded AI #방산
-        </p>
-      </div>
-
-      <div class="flex flex-wrap gap-3 pt-2 text-sm text-neutral-600">
-        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-neutral-200 shadow-sm">
-          <i data-lucide="graduation-cap" class="w-4 h-4 text-indigo-600"></i>
-          <span class="font-medium text-neutral-800">충남대학교 정보통계학 · 인공지능학 학사</span>
-        </div>
-        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-neutral-200 shadow-sm">
-          <i data-lucide="mail" class="w-4 h-4 text-indigo-600"></i>
-          <a href="mailto:bins021102@naver.com" class="hover:text-neutral-900 font-medium">bins021102@naver.com</a>
-        </div>
-        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-neutral-200 shadow-sm text-sm">
-          <img
-            src="data:image/webp;base64,UklGRj4BAABXRUJQVlA4IDIBAADwBgCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnnKeSd5Trrn7gggNYaY7tUjHTdy8pN4e9sULR2CYK0UfwAP72D6k7QeL/rnGlfapVh7sVwKtmhUXGKqg/2ialX/Usc1xnewo43QcJj5Gs+r4AUjTfDyfKShD2x7s9t2bnU5xS3WWU3wWPtqbhiHCUQ+Wf/vskQhgY7J3DZOJTTs2E77D57B1lbJCwuWRYxcMur8cRetfKoAfMDfa+xu6di/gi6AsW1e1QUpX1eEVgHamPiFsUEhKwshwI/9pH4Ip4nWKIP+MlPZ8F7wmvjtc/Ei78c2bDaej1LHE4mzJbSmekHLUrtul7AAPycCUC1cn8a5ClpW/blhYwdyHuDK9rr3hsfAsI2Y/eG+Pl1SWSv/ySAAA="
-            alt="티스토리 이모티콘"
-            class="w-5 h-5 object-contain select-none"
-          />
-          <a href="https://bin-dax.tistory.com/" target="_blank" class="hover:text-neutral-900 font-medium text-neutral-600">bin-dax.tistory.com</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== Tech Stack ===================== -->
-    <section class="space-y-4">
-      <h2 class="text-xl font-bold text-neutral-900 flex items-center gap-2">
-        <i data-lucide="cpu" class="w-5 h-5 text-indigo-600"></i> Tech Stack
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="bg-white p-5 rounded-2xl border border-neutral-200 shadow-sm space-y-2">
-          <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-500">Languages</h3>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="px-2.5 py-1 bg-white border border-blue-200 text-neutral-800 text-xs font-semibold rounded-lg">Python</span>
-            <span class="px-2.5 py-1 bg-white border border-blue-200 text-neutral-800 text-xs font-semibold rounded-lg">C++</span>
-            <span class="px-2.5 py-1 bg-white border border-blue-200 text-neutral-800 text-xs font-semibold rounded-lg">SQL</span>
-            <span class="px-2.5 py-1 bg-white border border-blue-200 text-neutral-800 text-xs font-semibold rounded-lg">node.js</span>
-          </div>
-        </div>
-        <div class="bg-white p-5 rounded-2xl border border-neutral-200 shadow-sm space-y-2">
-          <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-500">Tools</h3>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="px-2.5 py-1 bg-white border border-blue-200 text-neutral-800 text-xs font-semibold rounded-lg">FastAPI / Flask</span>
-            <span class="px-2.5 py-1 bg-white border border-blue-200 text-neutral-800 text-xs font-semibold rounded-lg">Git / Linux / Github</span>
-            <span class="px-2.5 py-1 bg-white border border-blue-200 text-neutral-800 text-xs font-semibold rounded-lg">Slack / notion</span>
-            <span class="px-2.5 py-1 bg-white border border-blue-200 text-neutral-800 text-xs font-semibold rounded-lg">Next.js</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== Work / Education ===================== -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-      <div class="space-y-4">
-        <h2 class="text-xl font-bold text-neutral-900 flex items-center gap-2">
-          <i data-lucide="briefcase" class="w-5 h-5 text-indigo-600"></i> Work Experience
-        </h2>
-        <div class="space-y-2">
-
-          <!-- Middle Georgia State University: 클릭 시 팝업 -->
-          <button onclick="openBootcamp('georgia')" class="w-full text-left bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-neutral-400 transition group">
-            <div>
-              <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 bg-neutral-400 rounded-full"></span> Middle Georgia State University
-              </div>
-              <p class="text-xs sm:text-sm text-neutral-500 mt-1">2024.11 – 2025.01</p>
-            </div>
-            <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-neutral-600 bg-neutral-100 border border-neutral-200 rounded-lg px-2.5 py-1 group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition">
-              자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </span>
-          </button>
-
-          <!-- (주)퀀토믹: 클릭 시 팝업 -->
-          <button onclick="openBootcamp('quantomic')" class="w-full text-left bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-neutral-400 transition group">
-            <div>
-              <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 bg-neutral-400 rounded-full"></span> (주)퀀토믹
-              </div>
-              <p class="text-xs sm:text-sm text-neutral-500 mt-1">2024.06 – 2024.08</p>
-            </div>
-            <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-neutral-600 bg-neutral-100 border border-neutral-200 rounded-lg px-2.5 py-1 group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition">
-              자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </span>
-          </button>
-
-        </div>
-
-        <h2 class="text-xl font-bold text-neutral-900 flex items-center gap-2 pt-2">
-          <i data-lucide="lightbulb" class="w-5 h-5 text-blue-600"></i> Research
-        </h2>
-        <div class="space-y-2">
-
-          <!-- 피카북 (졸업논문): 클릭 시 팝업 -->
-          <button onclick="openBootcamp('thesis')" class="w-full text-left bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-neutral-400 transition group">
-            <div>
-              <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-neutral-400"></span> 피카북 (Pick-a-book)
-              </div>
-              <p class="text-xs sm:text-sm text-neutral-500 font-normal mt-1">LLM · Self-Inspiring 기반 도서 큐레이션,  학사 졸업논문</p>
-            </div>
-            <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-neutral-600 bg-white border border-neutral-300 rounded-lg px-2.5 py-1 group-hover:bg-neutral-900 group-hover:text-white transition">
-              자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </span>
-          </button>
-
-          <!-- 중이온가속기 이상 탐지 (IBS): 클릭 시 팝업 -->
-          <button onclick="openBootcamp('ibs')" class="w-full text-left bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-neutral-400 transition group">
-            <div>
-              <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-neutral-400"></span> 중이온가속기 이상 탐지및 예측
-              </div>
-              <p class="text-xs sm:text-sm text-neutral-500 font-normal mt-1">기초과학연구원(IBS), 학부연구생</p>
-            </div>
-            <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-neutral-600 bg-white border border-neutral-300 rounded-lg px-2.5 py-1 group-hover:bg-neutral-900 group-hover:text-white transition">
-              자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </span>
-          </button>
-        </div>
-      </div>
-
-      <div class="space-y-4">
-        <h2 class="text-xl font-bold text-neutral-900 flex items-center gap-2">
-          <i data-lucide="book-open" class="w-5 h-5 text-indigo-600"></i> Education
-        </h2>
-        <div class="space-y-4">
-          <div class="w-full bg-white border border-neutral-200 rounded-xl p-4 shadow-sm">
-            <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-neutral-400"></span> 충남대학교 (학사 졸업)
-            </div>
-            <p class="text-xs sm:text-sm text-neutral-500 font-normal mt-1">정보통계학 전공 / 인공지능학 복수전공 · 2021.03 – 2026.02</p>
-          </div>
-
-          <div class="space-y-2 pt-2">
-            <h2 class="text-xl font-bold text-neutral-900 flex items-center gap-2">
-              <i data-lucide="dumbbell" class="w-5 h-5 text-blue-600"></i> 부트캠프 &amp; 실무 교육
-            </h2>
-
-            <!-- 방산: 클릭 시 팝업 (Project 1~3 탭) -->
-            <button onclick="openBootcamp('defense')" class="w-full text-left bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-neutral-400 transition group">
-              <div>
-                <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-neutral-400"></span> 방산 실무 교육 수료
-                </div>
-                <p class="text-xs sm:text-sm text-neutral-500 font-normal mt-1">26.08.10 – 26.08.30</p>
-              </div>
-              <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-neutral-600 bg-white border border-neutral-300 rounded-lg px-2.5 py-1 group-hover:bg-neutral-900 group-hover:text-white transition">
-                자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-              </span>
-            </button>
-
-            <!-- 로보테크: 진행중 · 클릭 시 팝업 -->
-            <button onclick="openBootcamp('robotech')" class="w-full text-left bg-[#fdf6f8] border border-pink-100 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-pink-200 transition group">
-              <div>
-                <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-pink-300"></span> 로보테크 AI 부트캠프
-                  <span class="text-[11px] font-bold text-pink-500 bg-pink-50 border border-pink-100 rounded-full px-2 py-0.5">진행중</span>
-                </div>
-                <p class="text-xs sm:text-sm text-neutral-500 font-normal mt-1">26.07.21 – 26.01.27</p>
-              </div>
-              <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-neutral-600 bg-white border border-neutral-300 rounded-lg px-2.5 py-1 group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition">
-                자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- ===================== Project ===================== -->
-    <section class="space-y-4">
-      <h2 class="text-xl font-bold text-neutral-900 flex items-center gap-2">
-        <i data-lucide="folder-git-2" class="w-5 h-5 text-indigo-600"></i> Project
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-        <!-- 투어나잇(TourNight): 클릭 시 팝업 -->
-        <button onclick="openBootcamp('tournight')" class="w-full text-left bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-neutral-400 transition group">
-          <div>
-            <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 bg-neutral-400 rounded-full"></span> 투어나잇 (TourNight)
-            </div>
-            <p class="text-xs sm:text-sm text-neutral-500 font-normal mt-1">대전 특화 외국인 야간관광 다국어 웹 : 2026 관광데이터 활용 공모전 (팀 무한대전)</p>
-          </div>
-          <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-neutral-600 bg-neutral-100 border border-neutral-200 rounded-lg px-2.5 py-1 group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition">
-            자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-          </span>
-        </button>
-
-        <!-- 위성 SBC 시뮬레이터: 클릭 시 팝업 -->
-        <button onclick="openBootcamp('satellite')" class="w-full text-left bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm hover:shadow-md hover:border-neutral-400 transition group">
-          <div>
-            <div class="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 bg-neutral-400 rounded-full"></span>실시간 RMS 스케줄러 &amp; FDIR 시뮬레이터
-            </div>
-            <p class="text-xs sm:text-sm text-neutral-500 font-normal mt-1">결정론적 하드 실시간성 &amp; 자율 고장 복구</p>
-          </div>
-          <span class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-neutral-600 bg-neutral-100 border border-neutral-200 rounded-lg px-2.5 py-1 group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition">
-            자세히 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-          </span>
-        </button>
-
-      </div>
-    </section>
-
-    <!-- ===================== Honors / Certs / Languages ===================== -->
-    <section class="space-y-6">
-      <h2 class="text-xl font-bold text-neutral-900 flex items-center gap-2">
-        <i data-lucide="award" class="w-5 h-5 text-indigo-600"></i> Awards, Certifications &amp; Languages
-      </h2>
-
-      <!-- 주요 수상 내역 : 카드 그리드 -->
-      <div class="space-y-3">
-        <h3 class="text-base font-bold text-neutral-900 flex items-center gap-2">
-          <i data-lucide="trophy" class="w-5 h-5 text-amber-500"></i> 주요 수상 내역
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-
-          <div class="bg-white rounded-xl border border-neutral-200 shadow-sm p-4 flex gap-3 hover:shadow-md hover:border-neutral-400 transition">
-            <div class="shrink-0 w-9 h-9 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-              <i data-lucide="medal" class="w-5 h-5 text-amber-500"></i>
-            </div>
-            <div class="min-w-0 space-y-1.5">
-              <span class="inline-block text-[11px] font-bold text-white bg-neutral-800 px-2 py-0.5 rounded-full">최우수상</span>
-              <h4 class="text-sm font-bold text-neutral-900 leading-snug">DSC 기업 연계 오픈 데이터 창업 챌린지</h4>
-              <p class="text-xs text-neutral-500 leading-relaxed">상권 빅데이터 및 정성 텍스트 융합 기반 공실 원인 진단 및 맞춤 매칭 솔루션 YOGI 개발</p>
-              <p class="text-xs text-neutral-400 font-medium flex items-center gap-1">
-                <i data-lucide="calendar" class="w-3 h-3"></i> 2025.11 · DSC 공유대학
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl border border-neutral-200 shadow-sm p-4 flex gap-3 hover:shadow-md hover:border-neutral-400 transition">
-            <div class="shrink-0 w-9 h-9 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-              <i data-lucide="medal" class="w-5 h-5 text-neutral-500"></i>
-            </div>
-            <div class="min-w-0 space-y-1.5">
-              <span class="inline-block text-[11px] font-bold text-white bg-neutral-800 px-2 py-0.5 rounded-full">우수포스터상</span>
-              <h4 class="text-sm font-bold text-neutral-900 leading-snug">Data Science Challenge 2025</h4>
-              <p class="text-xs text-neutral-500 leading-relaxed">AI-Hub 관광 Q&amp;A 데이터 활용 대전·충남의 관광정보 결손·다양성 분석, 지역 간 정보 불균형 시각화를 통한 관광정보 개선 정책 제안</p>
-              <p class="text-xs text-neutral-400 font-medium flex items-center gap-1">
-                <i data-lucide="calendar" class="w-3 h-3"></i> 2025.11 · 데이터사이언스플러스차세대융합인재양성사업단
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl border border-neutral-200 shadow-sm p-4 flex gap-3 hover:shadow-md hover:border-neutral-400 transition">
-            <div class="shrink-0 w-9 h-9 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-              <i data-lucide="medal" class="w-5 h-5 text-emerald-500"></i>
-            </div>
-            <div class="min-w-0 space-y-1.5">
-              <span class="inline-block text-[11px] font-bold text-white bg-neutral-800 px-2 py-0.5 rounded-full">창의상</span>
-              <h4 class="text-sm font-bold text-neutral-900 leading-snug">K-DATA SCIENCE 해커톤</h4>
-              <p class="text-xs text-neutral-500 leading-relaxed">YOLOv8 활용 해양폐기물 객체 탐지 및 위험도 등급 산정 알고리즘 구축, 웹 서비스 개발</p>
-              <p class="text-xs text-neutral-400 font-medium flex items-center gap-1">
-                <i data-lucide="calendar" class="w-3 h-3"></i> 2025.09 · K-DS 컨퍼런스
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl border border-neutral-200 shadow-sm p-4 flex gap-3 hover:shadow-md hover:border-neutral-400 transition">
-            <div class="shrink-0 w-9 h-9 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-              <i data-lucide="medal" class="w-5 h-5 text-neutral-500"></i>
-            </div>
-            <div class="min-w-0 space-y-1.5">
-              <span class="inline-block text-[11px] font-bold text-white bg-neutral-800 px-2 py-0.5 rounded-full">후원기업상</span>
-              <h4 class="text-sm font-bold text-neutral-900 leading-snug">SW중심 디지털 경진대회</h4>
-              <p class="text-xs text-neutral-500 leading-relaxed">Human Text VS AI Text 구별 NLP 모델 개발(RoBERTa, ko-sroberta-multitask 활용)</p>
-              <p class="text-xs text-neutral-400 font-medium flex items-center gap-1">
-                <i data-lucide="calendar" class="w-3 h-3"></i> 2025.08 · ㈜그렙
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl border border-neutral-200 shadow-sm p-4 flex gap-3 hover:shadow-md hover:border-neutral-400 transition">
-            <div class="shrink-0 w-9 h-9 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center">
-              <i data-lucide="medal" class="w-5 h-5 text-amber-500"></i>
-            </div>
-            <div class="min-w-0 space-y-1.5">
-              <span class="inline-block text-[11px] font-bold text-white bg-neutral-800 px-2 py-0.5 rounded-full">최우수상</span>
-              <h4 class="text-sm font-bold text-neutral-900 leading-snug">빅데이터/AI 해커톤 프로그램</h4>
-              <p class="text-xs text-neutral-500 leading-relaxed">취업준비생을 위한 취업 스펙 분석 및 추천 기업 생성 NLP 추천시스템 개발</p>
-              <p class="text-xs text-neutral-400 font-medium flex items-center gap-1">
-                <i data-lucide="calendar" class="w-3 h-3"></i> 2024.12 · RIS SW/AI 사업단
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- 자격증 + 어학 : 2단 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <div class="bg-white p-6 rounded-2xl border border-neutral-200 shadow-sm space-y-4">
-          <h3 class="text-base font-bold text-neutral-900 flex items-center gap-2 border-b pb-3 border-neutral-100">
-            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600"></i> 보유 자격증
-          </h3>
-          <ul class="text-sm sm:text-base divide-y divide-neutral-200">
-            <li class="flex justify-between items-center gap-3 py-3">
-              <span class="font-bold text-neutral-900">AICE (BASIC)</span>
-              <span class="text-xs sm:text-sm text-neutral-500 font-medium">KT · 2024.12</span>
-            </li>
-            <li class="flex justify-between items-center gap-3 py-3">
-              <span class="font-bold text-neutral-900">ADsP (데이터분석 준전문가)</span>
-              <span class="text-xs sm:text-sm text-neutral-500 font-medium">한국데이터산업진흥원 · 2024.06</span>
-            </li>
-            <li class="flex justify-between items-center gap-3 py-3">
-              <span class="font-bold text-neutral-900">SQLD (SQL 개발자)</span>
-              <span class="text-xs sm:text-sm text-neutral-500 font-medium">한국데이터산업진흥원 · 2024.04</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- 어학 & 글로벌 역량 : 점수 배지형 카드 -->
-        <div class="bg-white p-6 rounded-2xl border border-neutral-200 shadow-sm space-y-4">
-          <h3 class="text-base font-bold text-neutral-900 flex items-center gap-2 border-b pb-3 border-neutral-100">
-            <i data-lucide="languages" class="w-5 h-5 text-blue-600"></i> 어학 &amp; 글로벌 역량
-          </h3>
-
-          <div class="divide-y divide-neutral-200">
-            <!-- OPIc -->
-            <div class="flex items-center gap-3 py-3">
-              <div class="shrink-0 w-14 h-14 rounded-xl bg-blue-600 text-white flex flex-col items-center justify-center leading-none">
-                <span class="text-lg font-extrabold">IH</span>
-                <span class="text-[9px] opacity-80 mt-0.5">OPIc</span>
-              </div>
-              <div class="min-w-0">
-                <h4 class="text-sm font-bold text-neutral-900">OPIc</h4>
-                <p class="text-xs text-neutral-500">영어 말하기 · Intermediate High</p>
-                <p class="text-[11px] text-neutral-400 mt-0.5">2026.02</p>
-              </div>
-            </div>
-
-            <!-- TOEIC Speaking -->
-            <div class="flex items-center gap-3 py-3">
-              <div class="shrink-0 w-14 h-14 rounded-xl bg-indigo-600 text-white flex flex-col items-center justify-center leading-none">
-                <span class="text-lg font-extrabold">180</span>
-                <span class="text-[9px] opacity-80 mt-0.5">AM</span>
-              </div>
-              <div class="min-w-0">
-                <h4 class="text-sm font-bold text-neutral-900">TOEIC Speaking</h4>
-                <p class="text-xs text-neutral-500">Advanced Mid · 180점</p>
-                <p class="text-[11px] text-neutral-400 mt-0.5">2025.11</p>
-              </div>
-            </div>
-
-            <!-- 해외 교과목 (태국) -->
-            <div class="flex items-center gap-3 py-3">
-              <div class="shrink-0 w-14 h-14 rounded-xl bg-white border border-neutral-200 flex items-center justify-center">
-                <i data-lucide="globe-2" class="w-6 h-6 text-blue-600"></i>
-              </div>
-              <div class="min-w-0">
-                <h4 class="text-sm font-bold text-neutral-900">교환학생 (ASEAN Environment 교과목 이수)</h4>
-                <p class="text-xs text-neutral-500 flex items-center gap-1">
-                  <i data-lucide="map-pin" class="w-3 h-3"></i> 태국 · 2025.01 – 2025.02
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===================== Leadership ===================== -->
-    <section class="bg-white p-6 rounded-2xl border border-neutral-200 shadow-sm space-y-3">
-      <h3 class="text-base font-bold text-neutral-900 flex items-center gap-2">
-        <i data-lucide="users" class="w-5 h-5 text-indigo-600"></i> 리더십 및 기타 활동
-      </h3>
-      <div class="grid grid-cols-1 sm:grid-cols-3 text-sm text-neutral-700 divide-y sm:divide-y-0 sm:divide-x divide-neutral-200">
-        <div class="py-3 sm:py-1 sm:px-4 sm:first:pl-0">
-          <strong>충남대학교 정보통계학과</strong><br>
-          <span class="text-neutral-900 font-semibold text-xs">과동아리 BIG PI 회장</span>
-          <span class="block text-neutral-400 text-xs mt-0.5">2023.01 – 2023.08</span>
-        </div>
-        <div class="py-3 sm:py-1 sm:px-4">
-          <strong>충남대학교 컴퓨터융합학부</strong><br>
-          <span class="text-neutral-900 font-semibold text-xs">과동아리 SPG 임원진</span>
-          <span class="block text-neutral-400 text-xs mt-0.5">2024.01 – 2024.12</span>
-        </div>
-        <div class="py-3 sm:py-1 sm:px-4">
-          <strong>충남대학교 학생홍보대사</strong><br>
-          <span class="text-neutral-900 font-semibold text-xs">의전홍보대사(SNS팀원)</span>
-          <span class="block text-neutral-400 text-xs mt-0.5">2023.09 – 2024.08</span>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-neutral-200 bg-white py-8 text-center text-xs text-neutral-400 mt-auto">
-    <p>© 2026 KIM DABIN. All Rights Reserved. Hosted on GitHub Pages.</p>
-  </footer>
-
-  <!-- ===================== 부트캠프 팝업 ===================== -->
-  <div id="bootcamp-modal" class="fixed inset-0 z-[100] items-center justify-center p-3 sm:p-6">
-    <div id="modal-backdrop" class="absolute inset-0 bg-neutral-900/60 backdrop-blur-sm"></div>
-    <div class="relative bg-neutral-100 w-full max-w-4xl max-h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden">
-      <div class="bg-white border-b border-neutral-200 px-5 sm:px-6 pt-4 pb-3 space-y-3">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h2 id="modal-title" class="text-lg sm:text-xl font-extrabold text-neutral-900"></h2>
-            <p id="modal-subtitle" class="text-xs sm:text-sm text-neutral-500 mt-0.5"></p>
-          </div>
-          <button onclick="closeBootcamp()" class="shrink-0 w-8 h-8 rounded-lg text-neutral-400 hover:bg-neutral-100 hover:text-neutral-700 flex items-center justify-center transition">
-            <i data-lucide="x" class="w-5 h-5"></i>
-          </button>
-        </div>
-        <nav id="modal-tabs" class="flex flex-wrap items-center gap-1.5"></nav>
-      </div>
-      <div id="modal-body" class="overflow-y-auto px-5 sm:px-6 py-5 grow"></div>
-    </div>
+  <div id="home" class="intro route bg-image" style="background-image: url(img/intro-bg.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table"><div class="table-cell"><div class="container">
+      <h1 class="intro-title mb-4">안녕하세요, 김다빈입니다.</h1>
+      <p class="intro-subtitle"><span class="text-slider-items">AI &amp; Data Analyst,통계적 사고,NLP · Vision · Embedded AI,방산</span><strong class="text-slider"></strong></p>
+    </div></div></div>
   </div>
 
-  <!-- 분리된 스크립트 : 팝업 콘텐츠(부트캠프 + 경력) + 팝업 로직 -->
-  <script src="assets/defense.js"></script>
-  <script src="assets/robotech.js"></script>
-  <script src="assets/georgia.js"></script>
-  <script src="assets/quantomic.js"></script>
-  <script src="assets/thesis.js"></script>
-  <script src="assets/ibs.js"></script>
-  <script src="assets/tournight.js"></script>
-  <script src="assets/satellite.js"></script>
-  <script src="assets/main.js"></script>
+  <section id="about" class="about-mf sect-pt4 route"><div class="container"><div class="row"><div class="col-sm-12"><div class="box-shadow-full"><div class="row">
+    <div class="col-md-6">
+      <div class="row"><div class="col-sm-6 col-md-5"><div class="about-img"><img src="img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="프로필 사진"></div></div>
+      <div class="col-sm-6 col-md-7"><div class="about-info">
+        <p><span class="title-s">이름: </span><span>김다빈</span></p>
+        <p><span class="title-s">분야: </span><span>AI &amp; Data Analyst</span></p>
+        <p><span class="title-s">이메일: </span><span><a href="mailto:bins021102@naver.com">bins021102@naver.com</a></span></p>
+        <p><span class="title-s">GitHub: </span><span><a href="https://github.com/d-vinn" target="_blank" rel="noopener">github.com/d-vinn</a></span></p>
+        <p><span class="title-s">Blog: </span><span><a href="https://bin-dax.tistory.com/" target="_blank" rel="noopener">bin-dax.tistory.com</a></span></p>
+      </div></div></div>
+      <div class="skill-mf"><p class="title-s">핵심 분야 및 기술</p>
+        <p><strong>AI · Data</strong><br>Python, PyTorch, Scikit-learn, OpenCV, Pandas, NumPy</p>
+        <p><strong>Web · Backend</strong><br>FastAPI, Flask, Next.js, MySQL</p>
+        <p><strong>통계 · 데이터</strong><br>SQL, 시계열 분석, 머신러닝·딥러닝 모델링</p>
+      </div>
+    </div>
+    <div class="col-md-6"><div class="about-me pt-4 pt-md-0"><div class="title-box-2"><h5 class="title-left">About me</h5></div>
+      <p class="lead">통계적 사고를 바탕으로 데이터를 분석하고, AI 모델과 웹 서비스를 연결하는 AI &amp; Data Analyst 김다빈입니다.</p>
+      <p class="lead">NLP·Vision·시계열 분석부터 임베디드 AI까지 다양한 문제를 다루며, 분석 결과가 실제 서비스와 의사결정으로 이어지는 과정을 고민합니다.</p>
+      <p class="lead">충남대학교에서 정보통계학을 전공하고 인공지능학을 복수전공했습니다. 연구·인턴십·프로젝트를 통해 데이터 파이프라인, 머신러닝 모델링, 웹 개발 경험을 쌓았습니다.</p>
+    </div></div>
+  </div></div></div></div></div></section>
+
+  <section id="service" class="services-mf route"><div class="container">
+    <div class="row"><div class="col-sm-12"><div class="title-box text-center"><h3 class="title-a">Tech Stack</h3><p class="subtitle-a">프로젝트에서 활용한 기술과 도구</p><div class="line-mf"></div></div></div></div>
+    <div class="row">
+      <div class="col-md-4"><div class="service-box"><div class="service-ico"><span class="ico-circle"><i class="ion-code-working"></i></span></div><div class="service-content"><h2 class="s-title">Languages</h2><p class="s-description text-center">Python, C/C++, SQL, JavaScript</p></div></div></div>
+      <div class="col-md-4"><div class="service-box"><div class="service-ico"><span class="ico-circle"><i class="ion-ios-pulse-strong"></i></span></div><div class="service-content"><h2 class="s-title">AI &amp; Data</h2><p class="s-description text-center">PyTorch, Scikit-learn, OpenCV, Pandas, NumPy</p></div></div></div>
+      <div class="col-md-4"><div class="service-box"><div class="service-ico"><span class="ico-circle"><i class="ion-monitor"></i></span></div><div class="service-content"><h2 class="s-title">Web &amp; Backend</h2><p class="s-description text-center">FastAPI, Flask, Next.js, MySQL</p></div></div></div>
+      <div class="col-md-4"><div class="service-box"><div class="service-ico"><span class="ico-circle"><i class="ion-cloud"></i></span></div><div class="service-content"><h2 class="s-title">Tools &amp; Cloud</h2><p class="s-description text-center">Git, GitHub, AWS, Linux</p></div></div></div>
+      <div class="col-md-4"><div class="service-box"><div class="service-ico"><span class="ico-circle"><i class="ion-ios-book"></i></span></div><div class="service-content"><h2 class="s-title">Research</h2><p class="s-description text-center">시계열 이상 탐지, RAG, LLM 추론 및 통계 분석</p></div></div></div>
+      <div class="col-md-4"><div class="service-box"><div class="service-ico"><span class="ico-circle"><i class="ion-android-phone-portrait"></i></span></div><div class="service-content"><h2 class="s-title">Embedded AI</h2><p class="s-description text-center">Edge AI, 온디바이스 비전, 실시간 시스템</p></div></div></div>
+    </div>
+  </div></section>
+
+  <div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)"><div class="overlay-mf"></div><div class="container"><div class="row">
+    <div class="col-sm-3 col-lg-3"><div class="counter-box"><div class="counter-ico"><span class="ico-circle"><i class="ion-ribbon-a"></i></span></div><div class="counter-num"><p class="counter">5</p><span class="counter-text">수상 내역</span></div></div></div>
+    <div class="col-sm-3 col-lg-3"><div class="counter-box pt-4 pt-md-0"><div class="counter-ico"><span class="ico-circle"><i class="ion-briefcase"></i></span></div><div class="counter-num"><p class="counter">2</p><span class="counter-text">인턴십</span></div></div></div>
+    <div class="col-sm-3 col-lg-3"><div class="counter-box pt-4 pt-md-0"><div class="counter-ico"><span class="ico-circle"><i class="ion-university"></i></span></div><div class="counter-num"><p class="counter">2</p><span class="counter-text">전공</span></div></div></div>
+    <div class="col-sm-3 col-lg-3"><div class="counter-box pt-4 pt-md-0"><div class="counter-ico"><span class="ico-circle"><i class="ion-android-checkbox-outline"></i></span></div><div class="counter-num"><p class="counter">3</p><span class="counter-text">자격증</span></div></div></div>
+  </div></div></div>
+
+  <section id="work" class="portfolio-mf sect-pt4 route"><div class="container">
+    <div class="row"><div class="col-sm-12"><div class="title-box text-center"><h3 class="title-a">Projects &amp; Experience</h3><p class="subtitle-a">연구, 인턴십, 프로젝트 및 실무 교육</p><div class="line-mf"></div></div></div></div>
+    <div class="row">
+      <div class="col-md-4"><div class="work-box"><a href="img/work-1.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-1.jpg" alt="피카북 프로젝트" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">피카북 (Pick-a-book)</h2><div class="w-more"><span class="w-ctegory">LLM · RAG · Self-Inspiring</span></div><p>유아·초등 맞춤 도서 큐레이션 졸업논문. 최신 도서 RAG 파이프라인과 SI 추론 알고리즘을 설계하고 학부모 대상 A/B 테스트 및 통계 분석을 수행했습니다.</p><p>Gemini 1.5 Flash, ChromaDB, Flask, AWS EC2, DynamoDB, Kotlin</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
+      <div class="col-md-4"><div class="work-box"><a href="img/work-2.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-2.jpg" alt="중이온가속기 분석" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">중이온가속기 이상 탐지</h2><div class="w-more"><span class="w-ctegory">IBS · 시계열 분석 · 2025.08–12</span></div><p>가속기 센서 데이터의 노이즈·상관성을 분석하고 Anomaly Transformer 기반으로 미래 Phase Error와 빔 정지를 선제 예측하는 파이프라인을 구축했습니다.</p><p>Python, PyTorch, SciPy, Scikit-learn</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
+      <div class="col-md-4"><div class="work-box"><a href="img/work-3.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-3.jpg" alt="TourNight 프로젝트" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">투어나잇 (TourNight)</h2><div class="w-more"><span class="w-ctegory">관광 데이터 · 다국어 웹</span></div><p>대전 야간관광 통합 안내 웹. UI/UX, 스탬프투어·타슈·여행 성향 테스트 및 외부 API 연동을 담당했습니다. 검증 스팟 46곳, KTO 실데이터 142건.</p><p>Next.js, React, TypeScript, Supabase, KTO TourAPI, 카카오맵, Gemini</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
+      <div class="col-md-4"><div class="work-box"><a href="img/work-4.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-4.jpg" alt="B-is-able 프로젝트" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">B-is-able</h2><div class="w-more"><span class="w-ctegory">Middle Georgia State University · 2024.11–2025.01</span></div><p>시각장애인을 위한 웹캠 기반 운동 자세 피드백 서비스. MediaPipe와 OpenCV로 관절 각도를 추출하고, 모델 예측과 비교해 음성(TTS)으로 실시간 안내합니다. 데이터 5,836건으로 모델 학습.</p><p>Python, Scikit-learn, Django, JavaScript</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
+      <div class="col-md-4"><div class="work-box"><a href="img/work-5.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-5.jpg" alt="퀀토믹 프로젝트" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">퀀토믹 인턴십</h2><div class="w-more"><span class="w-ctegory">데이터 분석 · AI 모델링 · 2024.06–08</span></div><p>비전 알고리즘 설계, 딥러닝·머신러닝 모델링, 유전체 데이터 전처리와 통계 분석을 수행했습니다. 한우 마블링 분획을 위한 통계적 이진화 및 Connected Component Labeling, ResNet50·Multi-modal MLP 기반 체중 예측, SNP 결측치 보정·표현형 예측, 표본 크기 적응형 이상치 정제·도축 최적기 분석을 진행했습니다.</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
+      <div class="col-md-4"><div class="work-box"><a href="img/work-6.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-6.jpg" alt="실시간 RMS 시뮬레이터" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">실시간 RMS &amp; FDIR</h2><div class="w-more"><span class="w-ctegory">위성 SBC 시뮬레이터</span></div><p>하드웨어 없이 소프트웨어 시뮬레이션으로 하드 실시간 스케줄링과 자율 고장 탐지·격리·복구(FDIR)를 검증하는 프로젝트입니다.</p><p>Python, 객체지향 모듈 구조</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
+      <div class="col-md-4"><div class="work-box"><a href="img/work-1.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-1.jpg" alt="방산 실무 교육" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">방산 실무 교육</h2><div class="w-more"><span class="w-ctegory">무기체계 · 전자전 · RAM-C</span></div><p>비행체 내장형 능동 사이버·전자 방어체계 기획, AESA 레이다 대응 DRFM 재머 사양 및 효과도 분석, RAM-C 기반 신뢰도·가용도 분석을 수행했습니다.</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
+      <div class="col-md-4"><div class="work-box"><a href="img/work-2.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-2.jpg" alt="로보테크 AI 부트캠프" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">로보테크 AI 부트캠프</h2><div class="w-more"><span class="w-ctegory">Edge AI · 온디바이스 비전</span></div><p>스마트 운반 카트 실시간 화물 검수 시스템 등 Edge AI 파이프라인과 온디바이스 비전 시스템을 구현하는 교육 과정입니다.</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
+      <div class="col-md-4"><div class="work-box"><a href="img/work-3.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-3.jpg" alt="반도체 품질 분석" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">반도체 품질 분석</h2><div class="w-more"><span class="w-ctegory">SPC · SQC · 8D Report</span></div><p>제조 품질 사례의 Root Cause 분석 및 8D Report 작성, CMP 공정 OOS 원인과 SPC 관리선 분석, BGA 패키지 Chipping 불량 통계 모델링을 진행했습니다.</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
+    </div>
+  </div></section>
+
+  <div class="testimonials paralax-mf bg-image" style="background-image: url(img/overlay-bg.jpg)"><div class="overlay-mf"></div><div class="container"><div class="row"><div class="col-md-12"><div id="testimonial-mf" class="owl-carousel owl-theme">
+    <div class="testimonial-box"><div class="author-test"><img src="img/testimonial-2.jpg" alt="경력" class="rounded-circle b-shadow-a"><span class="author">Work Experience</span></div><div class="content-test"><p class="description lead">Middle Georgia State University에서 웹 개발 및 AI 모델링 인턴으로 근무했습니다. (2024.11–2025.01)</p><p class="description lead">(주)퀀토믹에서 데이터 분석 및 AI 모델링 인턴으로 근무했습니다. (2024.06–2024.08)</p><span class="comit"><i class="fa fa-quote-right"></i></span></div></div>
+    <div class="testimonial-box"><div class="author-test"><img src="img/testimonial-4.jpg" alt="연구" class="rounded-circle b-shadow-a"><span class="author">Research &amp; Training</span></div><div class="content-test"><p class="description lead">충남대학교 컴퓨터공학과 학부연구생으로 IBS 중이온가속기 센서 시계열 연구에 참여했습니다.</p><p class="description lead">로보테크 AI 부트캠프 진행 중 · 반도체 실무 부트캠프 수료 · 방위산업 실무 교육 수료</p><span class="comit"><i class="fa fa-quote-right"></i></span></div></div>
+  </div></div></div></div></div>
+
+  <section id="blog" class="blog-mf sect-pt4 route"><div class="container">
+    <div class="row"><div class="col-sm-12"><div class="title-box text-center"><h3 class="title-a">Education, Awards &amp; Certifications</h3><p class="subtitle-a">학력, 주요 수상, 자격 및 글로벌 경험</p><div class="line-mf"></div></div></div></div>
+    <div class="row">
+      <div class="col-md-4"><div class="card card-blog"><div class="card-img"><img src="img/post-1.jpg" alt="학력" class="img-fluid"></div><div class="card-body"><div class="card-category-box"><div class="card-category"><h6 class="category">Education</h6></div></div><h3 class="card-title">충남대학교</h3><p class="card-description">정보통계학 주전공 · 인공지능학 복수전공<br>2021.03–2026.02 (졸업)<br>학점 3.86 / 4.5<br><br>천안여자고등학교 · 2018.03–2021.02</p></div></div></div>
+      <div class="col-md-4"><div class="card card-blog"><div class="card-img"><img src="img/post-2.jpg" alt="수상" class="img-fluid"></div><div class="card-body"><div class="card-category-box"><div class="card-category"><h6 class="category">Honors &amp; Awards</h6></div></div><h3 class="card-title">주요 수상 내역</h3><p class="card-description">2025.11 DSC 기업 연계 오픈 데이터 활용 스타트업 챌린지 최우수상 · DSC 공유대학<br>2025.11 Data Science Challenge 2025 우수포스터상<br>2025.09 K-DATA SCIENCE 컨퍼런스 해커톤 창의상<br>2025.08 SW중심 디지털 경진대회 후원기업상<br>2024.12 빅데이터/AI 해커톤 프로그램 최우수상</p></div></div></div>
+      <div class="col-md-4"><div class="card card-blog"><div class="card-img"><img src="img/post-3.jpg" alt="자격 및 활동" class="img-fluid"></div><div class="card-body"><div class="card-category-box"><div class="card-category"><h6 class="category">Certifications &amp; Activities</h6></div></div><h3 class="card-title">자격 · 어학 · 활동</h3><p class="card-description"><strong>자격증</strong><br>AICE (BASIC) · KT · 2024.12<br>ADsP · 2024.06 · SQLD · 2024.04<br><br><strong>어학·글로벌</strong><br>OPIc IH · 2026.02<br>TOEIC Speaking Advanced Mid (180점) · 2025.11<br>ASEAN Environment 교과목 수강 · 태국 · 2025.01–02<br><br><strong>활동</strong><br>정보통계학과 과동아리 회장 · 컴퓨터융합학부 과동아리 임원진 · 학생홍보대사 SNS팀원 (2023.09–2024.08)<br>교내 행사 의전 지원 및 캠퍼스 투어 기획·진행</p></div></div></div>
+    </div>
+  </div></section>
+
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)"><div class="overlay-mf"></div><div class="container"><div class="row"><div class="col-sm-12"><div class="contact-mf"><div id="contact" class="box-shadow-full"><div class="row">
+    <div class="col-md-6"><div class="title-box-2"><h5 class="title-left">연락하기</h5></div><div><form action="mailto:bins021102@naver.com" method="get" role="form" class="contactForm"><div class="row">
+      <div class="col-md-12 mb-3"><div class="form-group"><input type="text" name="name" class="form-control" placeholder="이름" /></div></div>
+      <div class="col-md-12 mb-3"><div class="form-group"><input type="email" class="form-control" name="email" placeholder="이메일" /></div></div>
+      <div class="col-md-12 mb-3"><div class="form-group"><input type="text" class="form-control" name="subject" placeholder="제목" /></div></div>
+      <div class="col-md-12 mb-3"><div class="form-group"><textarea class="form-control" name="body" rows="5" placeholder="메시지"></textarea></div></div>
+      <div class="col-md-12"><button type="submit" class="button button-a button-big button-rouded">이메일 보내기</button></div>
+    </div></form></div></div>
+    <div class="col-md-6"><div class="title-box-2 pt-4 pt-md-0"><h5 class="title-left">Get in Touch</h5></div><div class="more-info"><p class="lead">프로젝트와 데이터 분석, AI 모델링 및 웹 개발에 관해 편하게 연락해 주세요.</p><ul class="list-ico"><li><span class="ion-ios-location"></span> 충남대학교 · 대전</li><li><span class="ion-email"></span> <a href="mailto:bins021102@naver.com">bins021102@naver.com</a></li><li><span class="ion-social-github"></span> <a href="https://github.com/d-vinn" target="_blank" rel="noopener">github.com/d-vinn</a></li><li><span class="ion-social-rss"></span> <a href="https://bin-dax.tistory.com/" target="_blank" rel="noopener">bin-dax.tistory.com</a></li></ul></div><div class="socials"><ul><li><a href="https://github.com/d-vinn" target="_blank" rel="noopener"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li></ul></div></div>
+  </div></div></div></div></div></div><footer><div class="container"><div class="row"><div class="col-sm-12"><div class="copyright-box"><p class="copyright">&copy; 2026 <strong>김다빈</strong>. All Rights Reserved</p><div class="credits"><a href="https://d-vinn.github.io">d-vinn.github.io</a></div></div></div></div></div></footer></section>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
