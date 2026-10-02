@@ -1352,6 +1352,10 @@ footer .credits a {
   display: flex;
 }
 
+.project-modal.active {
+  display: flex;
+}
+
 .project-modal-backdrop {
   position: absolute;
   inset: 0;
