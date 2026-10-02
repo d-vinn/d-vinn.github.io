@@ -15,6 +15,42 @@
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <style>
+    /* Projects 섹션 헤더 완전 중앙 정렬 */
+    #work .title-box.section-heading {
+      text-align: center !important;
+    }
+    #work .title-box.section-heading .line-mf {
+      margin: 0 auto !important;
+    }
+
+    /* 카드 내부 흰색 영역 높이 축소 (약 3/5 수준) 및 텍스트 레이아웃 변경 */
+    #work .work-box {
+      margin-bottom: 30px;
+    }
+    #work .work-content {
+      padding: 15px 20px !important;
+    }
+    #work .work-content .w-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1e1e1e;
+      margin-bottom: 5px;
+      display: block;
+    }
+    #work .work-content .w-more {
+      font-size: 0.85rem;
+      color: #0078ff;
+      margin-bottom: 8px;
+      display: block;
+    }
+    #work .work-content p {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: #4e4e4e;
+      margin-bottom: 0;
+    }
+  </style>
 </head>
 <body id="page-top">
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
@@ -84,20 +120,126 @@
     <div class="col-sm-3 col-lg-3"><div class="counter-box pt-4 pt-md-0"><div class="counter-ico"><span class="ico-circle"><i class="ion-android-checkbox-outline"></i></span></div><div class="counter-num"><p class="counter">3</p><span class="counter-text">자격증</span></div></div></div>
   </div></div></div>
 
-  <section id="work" class="portfolio-mf sect-pt4 route"><div class="container">
-    <div class="row"><div class="col-sm-12"><div class="title-box text-center section-heading"><h3 class="title-a">Projects &amp; Experience</h3><p class="subtitle-a">연구, 인턴십, 프로젝트 및 실무 교육</p><div class="line-mf"></div></div></div></div>
-    <div class="row">
-      <div class="col-md-4"><div class="work-box"><a href="img/work-1.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-1.jpg" alt="피카북 프로젝트" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">피카북 (Pick-a-book)</h2><div class="w-more"><span class="w-ctegory">LLM · RAG · Self-Inspiring</span></div><p>유아·초등 맞춤 도서 큐레이션 졸업논문. 최신 도서 RAG 파이프라인과 SI 추론 알고리즘을 설계하고 학부모 대상 A/B 테스트 및 통계 분석을 수행했습니다.</p><p>Gemini 1.5 Flash, ChromaDB, Flask, AWS EC2, DynamoDB, Kotlin</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
-      <div class="col-md-4"><div class="work-box"><a href="img/work-2.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-2.jpg" alt="중이온가속기 분석" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">중이온가속기 이상 탐지</h2><div class="w-more"><span class="w-ctegory">IBS · 시계열 분석 · 2025.08–12</span></div><p>가속기 센서 데이터의 노이즈·상관성을 분석하고 Anomaly Transformer 기반으로 미래 Phase Error와 빔 정지를 선제 예측하는 파이프라인을 구축했습니다.</p><p>Python, PyTorch, SciPy, Scikit-learn</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
-      <div class="col-md-4"><div class="work-box"><a href="img/work-3.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-3.jpg" alt="TourNight 프로젝트" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">투어나잇 (TourNight)</h2><div class="w-more"><span class="w-ctegory">관광 데이터 · 다국어 웹</span></div><p>대전 야간관광 통합 안내 웹. UI/UX, 스탬프투어·타슈·여행 성향 테스트 및 외부 API 연동을 담당했습니다. 검증 스팟 46곳, KTO 실데이터 142건.</p><p>Next.js, React, TypeScript, Supabase, KTO TourAPI, 카카오맵, Gemini</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
-      <div class="col-md-4"><div class="work-box"><a href="img/work-4.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-4.jpg" alt="B-is-able 프로젝트" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">B-is-able</h2><div class="w-more"><span class="w-ctegory">Middle Georgia State University · 2024.11–2025.01</span></div><p>시각장애인을 위한 웹캠 기반 운동 자세 피드백 서비스. MediaPipe와 OpenCV로 관절 각도를 추출하고, 모델 예측과 비교해 음성(TTS)으로 실시간 안내합니다. 데이터 5,836건으로 모델 학습.</p><p>Python, Scikit-learn, Django, JavaScript</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
-      <div class="col-md-4"><div class="work-box"><a href="img/work-5.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-5.jpg" alt="퀀토믹 프로젝트" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">퀀토믹 인턴십</h2><div class="w-more"><span class="w-ctegory">데이터 분석 · AI 모델링 · 2024.06–08</span></div><p>비전 알고리즘 설계, 딥러닝·머신러닝 모델링, 유전체 데이터 전처리와 통계 분석을 수행했습니다. 한우 마블링 분획을 위한 통계적 이진화 및 Connected Component Labeling, ResNet50·Multi-modal MLP 기반 체중 예측, SNP 결측치 보정·표현형 예측, 표본 크기 적응형 이상치 정제·도축 최적기 분석을 진행했습니다.</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
-      <div class="col-md-4"><div class="work-box"><a href="img/work-6.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-6.jpg" alt="실시간 RMS 시뮬레이터" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">실시간 RMS &amp; FDIR</h2><div class="w-more"><span class="w-ctegory">위성 SBC 시뮬레이터</span></div><p>하드웨어 없이 소프트웨어 시뮬레이션으로 하드 실시간 스케줄링과 자율 고장 탐지·격리·복구(FDIR)를 검증하는 프로젝트입니다.</p><p>Python, 객체지향 모듈 구조</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
-      <div class="col-md-4"><div class="work-box"><a href="img/work-1.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-1.jpg" alt="방산 실무 교육" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">방산 실무 교육</h2><div class="w-more"><span class="w-ctegory">무기체계 · 전자전 · RAM-C</span></div><p>비행체 내장형 능동 사이버·전자 방어체계 기획, AESA 레이다 대응 DRFM 재머 사양 및 효과도 분석, RAM-C 기반 신뢰도·가용도 분석을 수행했습니다.</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
-      <div class="col-md-4"><div class="work-box"><a href="img/work-2.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-2.jpg" alt="로보테크 AI 부트캠프" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">로보테크 AI 부트캠프</h2><div class="w-more"><span class="w-ctegory">Edge AI · 온디바이스 비전</span></div><p>스마트 운반 카트 실시간 화물 검수 시스템 등 Edge AI 파이프라인과 온디바이스 비전 시스템을 구현하는 교육 과정입니다.</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
-      <div class="col-md-4"><div class="work-box"><a href="img/work-3.jpg" data-lightbox="gallery-mf"><div class="work-img"><img src="img/work-3.jpg" alt="반도체 품질 분석" class="img-fluid"></div><div class="work-content"><div class="row"><div class="col-sm-8"><h2 class="w-title">반도체 품질 분석</h2><div class="w-more"><span class="w-ctegory">SPC · SQC · 8D Report</span></div><p>제조 품질 사례의 Root Cause 분석 및 8D Report 작성, CMP 공정 OOS 원인과 SPC 관리선 분석, BGA 패키지 Chipping 불량 통계 모델링을 진행했습니다.</p></div><div class="col-sm-4"><div class="w-like"><span class="ion-ios-plus-outline"></span></div></div></div></div></a></div></div>
+  <!-- Projects & Experience 섹션 (가운데 정렬 및 8개 카드 구성) -->
+  <section id="work" class="portfolio-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center section-heading">
+            <h3 class="title-a">Projects &amp; Experience</h3>
+            <p class="subtitle-a">연구, 인턴십, 프로젝트 및 실무 교육</p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- 1. 피카북 -->
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="javascript:void(0);" data-project-id="thesis">
+              <div class="work-img"><img src="img/work-1.jpg" alt="피카북 프로젝트" class="img-fluid"></div>
+              <div class="work-content">
+                <h2 class="w-title">피카북 (Pick-a-book)</h2>
+                <span class="w-more"><span class="w-ctegory">LLM · RAG · Self-Inspiring</span></span>
+                <p>유아·초등 맞춤 도서 큐레이션 졸업논문. RAG와 SI 알고리즘 설계 및 A/B 테스트 통계 분석.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- 2. 중이온가속기 -->
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="javascript:void(0);" data-project-id="ibs">
+              <div class="work-img"><img src="img/work-2.jpg" alt="중이온가속기 분석" class="img-fluid"></div>
+              <div class="work-content">
+                <h2 class="w-title">중이온가속기 이상 탐지</h2>
+                <span class="w-more"><span class="w-ctegory">IBS · 시계열 분석 · 2025.08–12</span></span>
+                <p>가속기 센서 데이터 분석 및 Anomaly Transformer 기반 미래 Phase Error 선제 예측 파이프라인.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- 3. 투어나잇 -->
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="javascript:void(0);" data-project-id="tournight">
+              <div class="work-img"><img src="img/work-3.jpg" alt="TourNight 프로젝트" class="img-fluid"></div>
+              <div class="work-content">
+                <h2 class="w-title">투어나잇 (TourNight)</h2>
+                <span class="w-more"><span class="w-ctegory">관광 데이터 · 다국어 웹</span></span>
+                <p>대전 야간관광 통합 안내 웹. UI/UX 디자인, 스탬프투어·타슈 및 외부 API 연동 담당.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- 4. B-is-able -->
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="javascript:void(0);" data-project-id="georgia">
+              <div class="work-img"><img src="img/work-4.jpg" alt="B-is-able 프로젝트" class="img-fluid"></div>
+              <div class="work-content">
+                <h2 class="w-title">B-is-able</h2>
+                <span class="w-more"><span class="w-ctegory">Middle Georgia State University · 2024.11–2025.01</span></span>
+                <p>시각장애인을 위한 웹캠 기반 운동 자세 피드백 서비스. MediaPipe 관절 추출 및 음성 안내.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- 5. 퀀토믹 인턴십 -->
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="javascript:void(0);" data-project-id="quantomic">
+              <div class="work-img"><img src="img/work-5.jpg" alt="퀀토믹 프로젝트" class="img-fluid"></div>
+              <div class="work-content">
+                <h2 class="w-title">퀀토믹 인턴십</h2>
+                <span class="w-more"><span class="w-ctegory">데이터 분석 · AI 모델링 · 2024.06–08</span></span>
+                <p>한우 마블링 분획 알고리즘, ResNet50 체중 예측, SNP 유전체 결측치 보정 및 KPN 도축 최적기 분석.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- 6. 실시간 RMS -->
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="javascript:void(0);" data-project-id="satellite">
+              <div class="work-img"><img src="img/work-6.jpg" alt="실시간 RMS 시뮬레이터" class="img-fluid"></div>
+              <div class="work-content">
+                <h2 class="w-title">실시간 RMS &amp; FDIR</h2>
+                <span class="w-more"><span class="w-ctegory">위성 SBC 시뮬레이터</span></span>
+                <p>소프트웨어 시뮬레이션 환경에서의 하드 실시간 스케줄링 및 자율 고장 복구(FDIR) 검증.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- 7. 방산 실무 교육 -->
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="javascript:void(0);" data-project-id="defense">
+              <div class="work-img"><img src="img/work-1.jpg" alt="방산 실무 교육" class="img-fluid"></div>
+              <div class="work-content">
+                <h2 class="w-title">방산 실무 교육</h2>
+                <span class="w-more"><span class="w-ctegory">무기체계 · 전자전 · RAM-C</span></span>
+                <p>비행체 능동 방어체계 기획, AESA 레이다 대응 DRFM 재머 사양 분석 및 RAM-C 신뢰도 분석.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- 8. 로보테크 AI 부트캠프 -->
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="javascript:void(0);" data-project-id="robotech">
+              <div class="work-img"><img src="img/work-2.jpg" alt="로보테크 AI 부트캠프" class="img-fluid"></div>
+              <div class="work-content">
+                <h2 class="w-title">로보테크 AI 부트캠프</h2>
+                <span class="w-more"><span class="w-ctegory">Edge AI · 온디바이스 비전</span></span>
+                <p>스마트 운반 카트 실시간 화물 검수 시스템 등 Edge AI 파이프라인 및 온디바이스 비전 구현.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div></section>
+  </section>
 
   <section id="blog" class="blog-mf sect-pt4 route"><div class="container">
     <div class="row"><div class="col-sm-12"><div class="title-box text-center"><h3 class="title-a">Education, Awards &amp; Certifications</h3><p class="subtitle-a">학력, 주요 수상, 자격 및 글로벌 경험</p><div class="line-mf"></div></div></div></div>
@@ -113,15 +255,18 @@
   </div></div></div></div></div></div><footer><div class="container"><div class="row"><div class="col-sm-12"><div class="copyright-box"><p class="copyright">&copy; 2026 <strong>김다빈</strong>. All Rights Reserved</p><div class="credits"><a href="https://d-vinn.github.io">d-vinn.github.io</a></div></div></div></div></div></footer></section>
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
+  
+  <!-- 모달 창 -->
   <div id="project-modal" class="project-modal" aria-hidden="true">
     <div class="project-modal-backdrop" data-close-project></div>
     <section class="project-modal-panel" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
       <button type="button" class="project-modal-close" aria-label="닫기" data-close-project>&times;</button>
       <h2 id="project-modal-title"></h2>
       <p id="project-modal-category" class="project-modal-category"></p>
-      <pre id="project-modal-markdown"></pre>
+      <pre id="project-modal-markdown" style="white-space: pre-wrap; word-break: break-word;"></pre>
     </section>
   </div>
+
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/popper/popper.min.js"></script>
@@ -133,5 +278,67 @@
   <script src="lib/lightbox/js/lightbox.min.js"></script>
   <script src="lib/typed/typed.min.js"></script>
   <script src="js/main.js"></script>
+  
+  <!-- 각 프로젝트 카드 클릭 시 상세 .md 내용이 모달에 띄워지도록 매칭하는 스크립트 -->
+  <script>
+    const projectData = {
+      defense: {
+        title: "방산 실무 교육",
+        category: "무기체계 기획 · 전자전 재머 설계 · RAM-C 신뢰도 분석",
+        content: `# 방산 실무 교육\n> 무기체계 기획 · 전자전 재머 설계 · RAM-C 신뢰도 분석\n\n---...\n\n## Project 1: 무기체계 기획 (비행체 내장형 능동 사이버/전자 방어체계)\n- 항공전자 공급망 잠복형 사이버/물리 교란(LotL 공격) 대응 비행체 내장형 능동 방어체계 기획.\n\n## Project 2: 전자전 재머 사양 설계\n- AESA 레이다 대응 DRFM 재머 방식 및 S-band 주파수 대역 선정, Burn-through Range 정량 분석.\n\n## Project 3: RAM-C 신뢰도 분석\n- KF-21 시제기 정비일지 데이터 전처리 및 MTBF, MTTR, 고유가용도 산출 및 정비 효율화 개선안 도출.`
+      },
+      robotech: {
+        title: "로보테크 AI 부트캠프",
+        category: "Edge AI · 온디바이스 비전 · TinyML",
+        content: `# 로보테크 AI 부트캠프\n> Edge AI · 온디바이스 비전 · TinyML\n\n---...\n\n## 스마트 운반 카트 실시간 화물 검수 시스템\n- ESP32-CAM 기반 실시간 화물 검수 및 Edge AI 파이프라인 구축.\n- FOMO(Faster Objects, More Objects) 초경량 객체 탐지 모델 학습 및 온디바이스 펌웨어 구현.`
+      },
+      thesis: {
+        title: "피카북 (Pick-a-book)",
+        category: "LLM · RAG · Self-Inspiring (학사 졸업논문)",
+        content: `# 피카북 (Pick-a-book)\n> LLM · Self-Inspiring 기반 유아·초등 맞춤형 도서 큐레이션 서비스\n\n---...\n\n- 알라딘 OpenAPI 기반 최신 도서 RAG 파이프라인 구축.\n- Self-Inspiring 추론 알고리즘을 통한 복합 맥락 추론 고도화.\n- 학부모 대상 A/B 테스트 및 통계 분석(대응표본 t-검정)을 통한 정량적 검증.`
+      },
+      georgia: {
+        title: "B-is-able",
+        category: "Vision AI · Pose Estimation · Barrier-Free Web",
+        content: `# B-is-able : 시각장애인을 위한 실시간 AI 운동 자세 피드백 웹 서비스\n> Middle Georgia State University 인턴\n\n---...\n\n- MediaPipe와 OpenCV를 활용한 웹캠 기반 관절 각도 추출 및 정자세 비교.\n- GradientBoostingRegressor 모델 학습을 통한 이상적 기준치 정의 및 실시간 음성(TTS) 피드백 제공.`
+      },
+      satellite: {
+        title: "실시간 RMS & FDIR",
+        category: "결정론적 하드 실시간성 & 자율 고장 복구(FDIR)",
+        content: `# 실시간 RMS 스케줄러 & FDIR 시뮬레이터\n> 결정론적 하드 실시간성 & 자율 고장 복구(FDIR)\n\n---...\n\n- RMS 알고리즘을 적용한 실시간 스케줄러 구축 및 Deadline Miss 감시.\n- CRC-16 무결성 검증을 거친 통신 패킷 구조 및 결정론적 FDIR 엔진 구현.`
+      },
+      ibs: {
+        title: "중이온가속기 이상 탐지",
+        category: "IBS · 시계열 분석 · 빔 정지 선제 예측",
+        content: `# 중이온가속기 센서 시계열 데이터 기반 빔 정지 선제 예측\n> 기초과학연구원(IBS) 위탁 연구 과제\n\n---...\n\n- 센서 신호 처리 및 Cross-Correlation, Box Plot, Heatmap 등 EDA 수행.\n- Anomaly Transformer를 활용한 미래 Phase Error 선제 예측 이진 분류 파이프라인 구축.`
+      },
+      quantomic: {
+        title: "(주)퀀토믹 인턴십",
+        category: "데이터 분석 · AI 모델링 · 유전체 분석",
+        content: `# (주)퀀토믹 인턴십\n> 비전 알고리즘 설계 · 딥러닝 모델링 · 유전체 데이터 전처리\n\n---...\n\n- 통계적 이진화 및 Connected Component Labeling 기반 한우 마블링 분획 알고리즘 개발.\n- ResNet50 특성 추출 및 Multi-modal MLP 기반 한우 3D 체중 예측.\n- 고차원 SNP 유전체 코사인 유사도 기반 결측치 보정 및 KPN 도축 최적기 분석.`
+      },
+      tournight: {
+        title: "투어나잇 (TourNight)",
+        category: "관광 데이터 · 다국어 웹 (2026 관광데이터 공모전)",
+        content: `# 투어나잇 (TourNight)\n> 대전 특화 외국인 야간관광 통합 안내 웹\n\n---...\n\n- KTO OpenAPI와 연계한 대전 야간 명소 46곳 데이터 시각화 및 지도·다국어 지원.\n- 홈 화면 및 전반적인 UI/UX 디자인, 스탬프투어·타슈(공공자전거) API 연동 담당.`
+      }
+    };
+
+    $(document).ready(function() {$('[data-project-id]').on('click', function(e) {
+        e.preventDefault();
+        const projectId = $(this).attr('data-project-id');
+        const data = projectData[projectId];
+        if (data) {
+          $('#project-modal-title').text(data.title);
+          $('#project-modal-category').text(data.category);
+          $('#project-modal-markdown').text(data.content);
+          $('#project-modal').addClass('active').attr('aria-hidden', 'false');
+        }
+      });
+
+      $('[data-close-project], .project-modal-backdrop').on('click', function() {$('#project-modal').removeClass('active').attr('aria-hidden', 'true');
+      });
+    });
+  </script>
 </body>
 </html>
