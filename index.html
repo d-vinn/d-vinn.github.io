@@ -16,7 +16,7 @@
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <style>
-    /* Projects 섹션 헤더 완전 중앙 정렬 */
+    /* Projects 섹션 헤더 완전 중앙 정렬 (Education 섹션과 동일) */
     #work .title-box.section-heading {
       text-align: center !important;
     }
@@ -24,31 +24,25 @@
       margin: 0 auto !important;
     }
 
-    /* 카드 내부 흰색 영역 높이 축소 (약 3/5 수준) 및 텍스트 레이아웃 변경 */
+    /* 카드 디자인 수정 (검은 설명 텍스트 제거 및 여백 조정) */
     #work .work-box {
-      margin-bottom: 30px;
+      margin-bottom: 40px; /* 아래 박스와의 여백 확보 */
     }
     #work .work-content {
-      padding: 15px 20px !important;
+      padding: 25px 20px !important; /* 잘라낸 설명 영역만큼 여백으로 채워 쾌적하게 구성 */
     }
     #work .work-content .w-title {
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: #1e1e1e;
-      margin-bottom: 5px;
-      display: block;
-    }
-    #work .work-content .w-more {
-      font-size: 0.85rem;
-      color: #0078ff;
       margin-bottom: 8px;
       display: block;
     }
-    #work .work-content p {
-      font-size: 0.85rem;
-      line-height: 1.4;
-      color: #4e4e4e;
+    #work .work-content .w-more {
+      font-size: 0.95rem;
+      color: #0078ff;
       margin-bottom: 0;
+      display: block;
     }
   </style>
 </head>
@@ -74,7 +68,7 @@
     <div class="overlay-itro"></div>
     <div class="intro-content display-table"><div class="table-cell"><div class="container">
       <h1 class="intro-title mb-4">안녕하세요, 김다빈입니다.</h1>
-      <p class="intro-subtitle"><span class="text-slider-items">AI &amp; Data Analyst,통계적 사고,NLP · Vision · Embedded AI,방산</span><strong class="text-slider"></strong></p>
+      <p class="intro-subtitle"><span class="text-slider-items">AI &amp; Data &amp; Embedded</span><strong class="text-slider"></strong></p>
     </div></div></div>
   </div>
 
@@ -120,7 +114,7 @@
     <div class="col-sm-3 col-lg-3"><div class="counter-box pt-4 pt-md-0"><div class="counter-ico"><span class="ico-circle"><i class="ion-android-checkbox-outline"></i></span></div><div class="counter-num"><p class="counter">3</p><span class="counter-text">자격증</span></div></div></div>
   </div></div></div>
 
-  <!-- Projects & Experience 섹션 (가운데 정렬 및 8개 카드 구성) -->
+  <!-- Projects & Experience 섹션 (가운데 정렬 및 3번째 이미지 스타일 적용) -->
   <section id="work" class="portfolio-mf sect-pt4 route">
     <div class="container">
       <div class="row">
@@ -141,7 +135,6 @@
               <div class="work-content">
                 <h2 class="w-title">피카북 (Pick-a-book)</h2>
                 <span class="w-more"><span class="w-ctegory">LLM · RAG · Self-Inspiring</span></span>
-                <p>유아·초등 맞춤 도서 큐레이션 졸업논문. RAG와 SI 알고리즘 설계 및 A/B 테스트 통계 분석.</p>
               </div>
             </a>
           </div>
@@ -154,7 +147,6 @@
               <div class="work-content">
                 <h2 class="w-title">중이온가속기 이상 탐지</h2>
                 <span class="w-more"><span class="w-ctegory">IBS · 시계열 분석 · 2025.08–12</span></span>
-                <p>가속기 센서 데이터 분석 및 Anomaly Transformer 기반 미래 Phase Error 선제 예측 파이프라인.</p>
               </div>
             </a>
           </div>
@@ -167,7 +159,6 @@
               <div class="work-content">
                 <h2 class="w-title">투어나잇 (TourNight)</h2>
                 <span class="w-more"><span class="w-ctegory">관광 데이터 · 다국어 웹</span></span>
-                <p>대전 야간관광 통합 안내 웹. UI/UX 디자인, 스탬프투어·타슈 및 외부 API 연동 담당.</p>
               </div>
             </a>
           </div>
@@ -180,7 +171,6 @@
               <div class="work-content">
                 <h2 class="w-title">B-is-able</h2>
                 <span class="w-more"><span class="w-ctegory">Middle Georgia State University · 2024.11–2025.01</span></span>
-                <p>시각장애인을 위한 웹캠 기반 운동 자세 피드백 서비스. MediaPipe 관절 추출 및 음성 안내.</p>
               </div>
             </a>
           </div>
@@ -193,7 +183,6 @@
               <div class="work-content">
                 <h2 class="w-title">퀀토믹 인턴십</h2>
                 <span class="w-more"><span class="w-ctegory">데이터 분석 · AI 모델링 · 2024.06–08</span></span>
-                <p>한우 마블링 분획 알고리즘, ResNet50 체중 예측, SNP 유전체 결측치 보정 및 KPN 도축 최적기 분석.</p>
               </div>
             </a>
           </div>
@@ -206,7 +195,6 @@
               <div class="work-content">
                 <h2 class="w-title">실시간 RMS &amp; FDIR</h2>
                 <span class="w-more"><span class="w-ctegory">위성 SBC 시뮬레이터</span></span>
-                <p>소프트웨어 시뮬레이션 환경에서의 하드 실시간 스케줄링 및 자율 고장 복구(FDIR) 검증.</p>
               </div>
             </a>
           </div>
@@ -219,7 +207,6 @@
               <div class="work-content">
                 <h2 class="w-title">방산 실무 교육</h2>
                 <span class="w-more"><span class="w-ctegory">무기체계 · 전자전 · RAM-C</span></span>
-                <p>비행체 능동 방어체계 기획, AESA 레이다 대응 DRFM 재머 사양 분석 및 RAM-C 신뢰도 분석.</p>
               </div>
             </a>
           </div>
@@ -232,7 +219,6 @@
               <div class="work-content">
                 <h2 class="w-title">로보테크 AI 부트캠프</h2>
                 <span class="w-more"><span class="w-ctegory">Edge AI · 온디바이스 비전</span></span>
-                <p>스마트 운반 카트 실시간 화물 검수 시스템 등 Edge AI 파이프라인 및 온디바이스 비전 구현.</p>
               </div>
             </a>
           </div>
@@ -279,7 +265,6 @@
   <script src="lib/typed/typed.min.js"></script>
   <script src="js/main.js"></script>
   
-  <!-- 각 프로젝트 카드 클릭 시 상세 .md 내용이 모달에 띄워지도록 매칭하는 스크립트 -->
   <script>
     const projectData = {
       defense: {
