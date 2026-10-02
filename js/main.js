@@ -1,5 +1,42 @@
 (function ($) {
 	"use strict";
+
+	// Toggle each project card's Markdown-formatted details with its plus icon.
+	document.querySelectorAll('.portfolio-mf .work-box').forEach(function (card) {
+		var toggle = card.querySelector('.w-like');
+		var content = card.querySelector('.work-content');
+		var title = card.querySelector('.w-title');
+		var category = card.querySelector('.w-ctegory');
+		var descriptions = Array.from(card.querySelectorAll('.work-content > .row p'));
+		if (!toggle || !content || !title) return;
+
+		var markdown = document.createElement('pre');
+		markdown.className = 'project-details';
+		markdown.textContent = '# ' + title.textContent.trim() + '\n\n' +
+			(category ? category.textContent.trim() + '\n\n' : '') +
+			descriptions.map(function (paragraph) {
+				return '- ' + paragraph.textContent.trim();
+			}).join('\n\n');
+		content.appendChild(markdown);
+		toggle.setAttribute('role', 'button');
+		toggle.setAttribute('tabindex', '0');
+		toggle.setAttribute('aria-label', title.textContent.trim() + ' 상세 내용');
+		toggle.setAttribute('aria-expanded', 'false');
+
+		function toggleDetails(event) {
+			event.preventDefault();
+			event.stopPropagation();
+			if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+			var isOpen = card.classList.toggle('project-open');
+			toggle.setAttribute('aria-expanded', String(isOpen));
+		}
+
+		toggle.addEventListener('click', toggleDetails);
+		toggle.addEventListener('keydown', function (event) {
+			if (event.key === 'Enter' || event.key === ' ') toggleDetails(event);
+		});
+	});
+
 	var nav = $('nav');
   var navHeight = nav.outerHeight();
   
